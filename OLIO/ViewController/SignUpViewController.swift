@@ -30,8 +30,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
     var eachAuthenticationNumber = ["1"]
     var strTest = "안녕하십니까"
     var sendString = ""
-    var count = 2
-    var ccount = 0
+    var count = 1
+    var isfirst = 0
+    var firstNum = ""
+        
+        
     
     //MARK: lifeCycle
     override func viewDidLoad() {
@@ -74,49 +77,48 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func firstAuthenticationNumber(_ sender: Any) {
+        isfirst += 1
         
-            
+        if isfirst == 1{
+            firstNum = firstAuthenticationNumber.text!
+        }
         
-            sendString = String(Int(firstAuthenticationNumber.text!)!%10)
-            
-            print("카운트 : \(count)")
-            print("sendString : \(sendString)") ///
+        sendString = String(Int(firstAuthenticationNumber.text!)!%10)
         
-        if count%2 == 0{
-            
-        
+        if sendString != firstNum{
+      
             switch count {
             case 2:
                 secondAuthenticationNumber.text = sendString
                 print("case 2")
-                count += 1
                 break
             case 3:
                 thirdAuthenticationNumber.text = sendString
                 print("case 3")
-                count += 1
                 break
             case 4:
                 fourAuthenticationNumber.text = sendString
                 print("case 4")
-                count += 1
                 break
             case 5:
                 fiveAuthenticationNumber.text = sendString
                 print("case 5")
-                count += 1
                 break
             case 6:
                 sixAuthenticationNumber.text = sendString
                 print("case 6")
-                count += 1
                 break
             default:
                 break
             }
+            
+            count += 1
         }
         checkMaxLength(textField: firstAuthenticationNumber, maxLength: 1)
+
     }
+        
+
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
