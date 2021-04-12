@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A13745D260241E600E75EA7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13745C260241E600E75EA7 /* ProfileViewController.swift */; };
+		6A566F3F26002A54001F89D9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A566F3E26002A54001F89D9 /* MainViewController.swift */; };
+		6A566F4226002A62001F89D9 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A566F4126002A62001F89D9 /* ProjectViewController.swift */; };
+		6A566F4926002B91001F89D9 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A566F4826002B91001F89D9 /* PortfolioViewController.swift */; };
+		6A566F4D26007C9D001F89D9 /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A566F4C26007C9D001F89D9 /* PortfolioCollectionViewCell.swift */; };
+		6A5ECC3A26041ABC0027EA6B /* UseTechnologyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5ECC3926041ABC0027EA6B /* UseTechnologyViewController.swift */; };
+		6A5ECC3D26041AED0027EA6B /* ProfileProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5ECC3C26041AED0027EA6B /* ProfileProjectViewController.swift */; };
+		6A5ECC4026041B330027EA6B /* AwardWinningCareerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5ECC3F26041B330027EA6B /* AwardWinningCareerViewController.swift */; };
+		6A5ECC4326041BE20027EA6B /* CertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5ECC4226041BE20027EA6B /* CertificateViewController.swift */; };
+		6A71E0062608784D00596F58 /* FindIdPasswardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71E0052608784D00596F58 /* FindIdPasswardViewController.swift */; };
+		6A8F8BB725F5C5400067A0AF /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8F8BB625F5C5400067A0AF /* DescriptionViewController.swift */; };
+		6A9C4C4025F7B97800F2AC18 /* SignInViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9C4C3F25F7B97800F2AC18 /* SignInViewcontroller.swift */; };
+		6AA96F1F2611B6EE004649D5 /* UseTechnologyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA96F1E2611B6EE004649D5 /* UseTechnologyTableViewCell.swift */; };
+		6AB9265A2608237800C31689 /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB926592608237800C31689 /* SchoolTableViewCell.swift */; };
+		6ACF4E5C2612F85600A54FF8 /* CertificateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACF4E5B2612F85600A54FF8 /* CertificateTableViewCell.swift */; };
+		6AD283872600F0BC00C0BA9F /* ProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD283862600F0BC00C0BA9F /* ProjectCollectionViewCell.swift */; };
+		6AD2A6862611D45800FF7C6C /* AwardWinningCareerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD2A6852611D45800FF7C6C /* AwardWinningCareerTableViewCell.swift */; };
+		6AD2A6892611EA4F00FF7C6C /* ProfileProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD2A6882611EA4F00FF7C6C /* ProfileProjectTableViewCell.swift */; };
+		6AE25C0D25F3663A00F27FEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE25C0C25F3663A00F27FEA /* AppDelegate.swift */; };
+		6AE25C0F25F3663A00F27FEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE25C0E25F3663A00F27FEA /* SceneDelegate.swift */; };
+		6AE25C1425F3663A00F27FEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE25C1225F3663A00F27FEA /* Main.storyboard */; };
+		6AE25C1725F3663A00F27FEA /* OLIO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AE25C1525F3663A00F27FEA /* OLIO.xcdatamodeld */; };
+		6AE25C1925F3663C00F27FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AE25C1825F3663C00F27FEA /* Assets.xcassets */; };
+		6AE25C1C25F3663C00F27FEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AE25C1A25F3663C00F27FEA /* LaunchScreen.storyboard */; };
+		6AFA329E25FA5597001E6972 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA329D25FA5597001E6972 /* SignUpViewController.swift */; };
+		6AFA32A125FA58DB001E6972 /* WelcomeToOlioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA32A025FA58DB001E6972 /* WelcomeToOlioViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A13745C260241E600E75EA7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6A566F3E26002A54001F89D9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6A566F4126002A62001F89D9 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		6A566F4826002B91001F89D9 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		6A566F4C26007C9D001F89D9 /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A5ECC3926041ABC0027EA6B /* UseTechnologyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseTechnologyViewController.swift; sourceTree = "<group>"; };
+		6A5ECC3C26041AED0027EA6B /* ProfileProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProjectViewController.swift; sourceTree = "<group>"; };
+		6A5ECC3F26041B330027EA6B /* AwardWinningCareerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardWinningCareerViewController.swift; sourceTree = "<group>"; };
+		6A5ECC4226041BE20027EA6B /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
+		6A71E0052608784D00596F58 /* FindIdPasswardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdPasswardViewController.swift; sourceTree = "<group>"; };
+		6A8F8BB625F5C5400067A0AF /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		6A9C4C3F25F7B97800F2AC18 /* SignInViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewcontroller.swift; sourceTree = "<group>"; };
+		6AA96F1E2611B6EE004649D5 /* UseTechnologyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseTechnologyTableViewCell.swift; sourceTree = "<group>"; };
+		6AB926592608237800C31689 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
+		6ACF4E5B2612F85600A54FF8 /* CertificateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTableViewCell.swift; sourceTree = "<group>"; };
+		6AD283862600F0BC00C0BA9F /* ProjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AD2A6852611D45800FF7C6C /* AwardWinningCareerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardWinningCareerTableViewCell.swift; sourceTree = "<group>"; };
+		6AD2A6882611EA4F00FF7C6C /* ProfileProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProjectTableViewCell.swift; sourceTree = "<group>"; };
+		6AE25C0925F3663A00F27FEA /* OLIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OLIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE25C0C25F3663A00F27FEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6AE25C0E25F3663A00F27FEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6AE25C1325F3663A00F27FEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6AE25C1625F3663A00F27FEA /* OLIO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OLIO.xcdatamodel; sourceTree = "<group>"; };
+		6AE25C1825F3663C00F27FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6AE25C1B25F3663C00F27FEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6AE25C1D25F3663C00F27FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AFA329D25FA5597001E6972 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6AFA32A025FA58DB001E6972 /* WelcomeToOlioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeToOlioViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AE25C0625F3663A00F27FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A566F4B26007C8D001F89D9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6A566F4C26007C9D001F89D9 /* PortfolioCollectionViewCell.swift */,
+				6AD283862600F0BC00C0BA9F /* ProjectCollectionViewCell.swift */,
+				6AB926592608237800C31689 /* SchoolTableViewCell.swift */,
+				6AA96F1E2611B6EE004649D5 /* UseTechnologyTableViewCell.swift */,
+				6AD2A6852611D45800FF7C6C /* AwardWinningCareerTableViewCell.swift */,
+				6AD2A6882611EA4F00FF7C6C /* ProfileProjectTableViewCell.swift */,
+				6ACF4E5B2612F85600A54FF8 /* CertificateTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6A7B378025F9B8BD0090579E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6A8F8BB625F5C5400067A0AF /* DescriptionViewController.swift */,
+				6A9C4C3F25F7B97800F2AC18 /* SignInViewcontroller.swift */,
+				6AFA329D25FA5597001E6972 /* SignUpViewController.swift */,
+				6AFA32A025FA58DB001E6972 /* WelcomeToOlioViewController.swift */,
+				6A566F3E26002A54001F89D9 /* MainViewController.swift */,
+				6A566F4126002A62001F89D9 /* ProjectViewController.swift */,
+				6A566F4826002B91001F89D9 /* PortfolioViewController.swift */,
+				6A13745C260241E600E75EA7 /* ProfileViewController.swift */,
+				6A5ECC3926041ABC0027EA6B /* UseTechnologyViewController.swift */,
+				6A5ECC3C26041AED0027EA6B /* ProfileProjectViewController.swift */,
+				6A5ECC3F26041B330027EA6B /* AwardWinningCareerViewController.swift */,
+				6A5ECC4226041BE20027EA6B /* CertificateViewController.swift */,
+				6A71E0052608784D00596F58 /* FindIdPasswardViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6A7B378125F9B8C30090579E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6AE25C1225F3663A00F27FEA /* Main.storyboard */,
+				6AE25C1A25F3663C00F27FEA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6A7B378225F9B8D50090579E /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				6AE25C0C25F3663A00F27FEA /* AppDelegate.swift */,
+				6AE25C0E25F3663A00F27FEA /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		6AE25C0025F3663A00F27FEA = {
+			isa = PBXGroup;
+			children = (
+				6AE25C0B25F3663A00F27FEA /* OLIO */,
+				6AE25C0A25F3663A00F27FEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AE25C0A25F3663A00F27FEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AE25C0925F3663A00F27FEA /* OLIO.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AE25C0B25F3663A00F27FEA /* OLIO */ = {
+			isa = PBXGroup;
+			children = (
+				6A566F4B26007C8D001F89D9 /* Cell */,
+				6A7B378225F9B8D50090579E /* Delegate */,
+				6A7B378125F9B8C30090579E /* Storyboard */,
+				6A7B378025F9B8BD0090579E /* ViewController */,
+				6AE25C1825F3663C00F27FEA /* Assets.xcassets */,
+				6AE25C1D25F3663C00F27FEA /* Info.plist */,
+				6AE25C1525F3663A00F27FEA /* OLIO.xcdatamodeld */,
+			);
+			path = OLIO;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AE25C0825F3663A00F27FEA /* OLIO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AE25C2025F3663C00F27FEA /* Build configuration list for PBXNativeTarget "OLIO" */;
+			buildPhases = (
+				6AE25C0525F3663A00F27FEA /* Sources */,
+				6AE25C0625F3663A00F27FEA /* Frameworks */,
+				6AE25C0725F3663A00F27FEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OLIO;
+			productName = OLIO;
+			productReference = 6AE25C0925F3663A00F27FEA /* OLIO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AE25C0125F3663A00F27FEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					6AE25C0825F3663A00F27FEA = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 6AE25C0425F3663A00F27FEA /* Build configuration list for PBXProject "OLIO" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6AE25C0025F3663A00F27FEA;
+			productRefGroup = 6AE25C0A25F3663A00F27FEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AE25C0825F3663A00F27FEA /* OLIO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AE25C0725F3663A00F27FEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE25C1C25F3663C00F27FEA /* LaunchScreen.storyboard in Resources */,
+				6AE25C1925F3663C00F27FEA /* Assets.xcassets in Resources */,
+				6AE25C1425F3663A00F27FEA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AE25C0525F3663A00F27FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AFA329E25FA5597001E6972 /* SignUpViewController.swift in Sources */,
+				6A566F4D26007C9D001F89D9 /* PortfolioCollectionViewCell.swift in Sources */,
+				6A5ECC4326041BE20027EA6B /* CertificateViewController.swift in Sources */,
+				6ACF4E5C2612F85600A54FF8 /* CertificateTableViewCell.swift in Sources */,
+				6A566F4926002B91001F89D9 /* PortfolioViewController.swift in Sources */,
+				6AE25C1725F3663A00F27FEA /* OLIO.xcdatamodeld in Sources */,
+				6A566F4226002A62001F89D9 /* ProjectViewController.swift in Sources */,
+				6A9C4C4025F7B97800F2AC18 /* SignInViewcontroller.swift in Sources */,
+				6AB9265A2608237800C31689 /* SchoolTableViewCell.swift in Sources */,
+				6A5ECC3A26041ABC0027EA6B /* UseTechnologyViewController.swift in Sources */,
+				6A8F8BB725F5C5400067A0AF /* DescriptionViewController.swift in Sources */,
+				6AE25C0D25F3663A00F27FEA /* AppDelegate.swift in Sources */,
+				6AD2A6862611D45800FF7C6C /* AwardWinningCareerTableViewCell.swift in Sources */,
+				6AD283872600F0BC00C0BA9F /* ProjectCollectionViewCell.swift in Sources */,
+				6AE25C0F25F3663A00F27FEA /* SceneDelegate.swift in Sources */,
+				6A5ECC4026041B330027EA6B /* AwardWinningCareerViewController.swift in Sources */,
+				6AD2A6892611EA4F00FF7C6C /* ProfileProjectTableViewCell.swift in Sources */,
+				6AA96F1F2611B6EE004649D5 /* UseTechnologyTableViewCell.swift in Sources */,
+				6A5ECC3D26041AED0027EA6B /* ProfileProjectViewController.swift in Sources */,
+				6A13745D260241E600E75EA7 /* ProfileViewController.swift in Sources */,
+				6AFA32A125FA58DB001E6972 /* WelcomeToOlioViewController.swift in Sources */,
+				6A71E0062608784D00596F58 /* FindIdPasswardViewController.swift in Sources */,
+				6A566F3F26002A54001F89D9 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6AE25C1225F3663A00F27FEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AE25C1325F3663A00F27FEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6AE25C1A25F3663C00F27FEA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AE25C1B25F3663C00F27FEA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AE25C1E25F3663C00F27FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6AE25C1F25F3663C00F27FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AE25C2125F3663C00F27FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q25U65UWAP;
+				INFOPLIST_FILE = OLIO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yujin.OLIO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6AE25C2225F3663C00F27FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q25U65UWAP;
+				INFOPLIST_FILE = OLIO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yujin.OLIO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AE25C0425F3663A00F27FEA /* Build configuration list for PBXProject "OLIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE25C1E25F3663C00F27FEA /* Debug */,
+				6AE25C1F25F3663C00F27FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AE25C2025F3663C00F27FEA /* Build configuration list for PBXNativeTarget "OLIO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE25C2125F3663C00F27FEA /* Debug */,
+				6AE25C2225F3663C00F27FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6AE25C1525F3663A00F27FEA /* OLIO.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6AE25C1625F3663A00F27FEA /* OLIO.xcdatamodel */,
+			);
+			currentVersion = 6AE25C1625F3663A00F27FEA /* OLIO.xcdatamodel */;
+			path = OLIO.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6AE25C0125F3663A00F27FEA /* Project object */;
+}
