@@ -82,6 +82,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
             print("카운트 : \(count)")
             print("sendString : \(sendString)") ///
         
+        if count%2 == 0{
+            
         
             switch count {
             case 2:
@@ -112,7 +114,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
             default:
                 break
             }
-        
+        }
         checkMaxLength(textField: firstAuthenticationNumber, maxLength: 1)
     }
     
