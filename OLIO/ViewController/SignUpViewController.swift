@@ -31,18 +31,12 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
     var strTest = "안녕하십니까"
     var sendString = ""
     var count = 1
-    var isfirst = 0
+    var isfirstCount = 0
     var firstNum = ""
         
-        
-    
     //MARK: lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let strRange2 = strTest.index(strTest.startIndex, offsetBy: 2) ..< strTest.index(strTest.endIndex, offsetBy: -2)
-
-        
         
         firstAuthenticationNumber.delegate = self
         secondAuthenticationNumber.delegate = self
@@ -77,43 +71,88 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func firstAuthenticationNumber(_ sender: Any) {
-        isfirst += 1
+        let isBackSpace = strcmp(firstAuthenticationNumber.text, "\\b")
         
-        if isfirst == 1{
-            firstNum = firstAuthenticationNumber.text!
-        }
-        
-        sendString = String(Int(firstAuthenticationNumber.text!)!%10)
-        
-        if sendString != firstNum{
-      
+        if isBackSpace == -92 { //MARK: AuthenticationNumber 삭제
+            
+            print("지우기 전 count: \(count)")
+            
             switch count {
+            case 1:
+                firstAuthenticationNumber.text = ""
+                count -= 1
+                break
             case 2:
-                secondAuthenticationNumber.text = sendString
-                print("case 2")
+                secondAuthenticationNumber.text = ""
+                count -= 1
                 break
             case 3:
-                thirdAuthenticationNumber.text = sendString
-                print("case 3")
+                thirdAuthenticationNumber.text = ""
+                count -= 1
                 break
             case 4:
-                fourAuthenticationNumber.text = sendString
-                print("case 4")
+                fourAuthenticationNumber.text = ""
+                count -= 1
                 break
             case 5:
-                fiveAuthenticationNumber.text = sendString
-                print("case 5")
+                fiveAuthenticationNumber.text = ""
+                count -= 1
                 break
             case 6:
-                sixAuthenticationNumber.text = sendString
-                print("case 6")
+                sixAuthenticationNumber.text = ""
+                count -= 1
                 break
             default:
                 break
             }
+        }else{ //MARK: AuthenticationNumber 입력
+            isfirstCount += 1
             
-            count += 1
+            if isfirstCount == 1{
+                firstNum = firstAuthenticationNumber.text!
+            }
+            
+            sendString = String(Int(firstAuthenticationNumber.text!)!%10)
+            
+            print("sendString : \(sendString)")
+            
+            if sendString != firstNum{
+                print("sendString != firstNum")
+                switch count {
+                case 1:
+                    secondAuthenticationNumber.text = sendString
+                    print("case 1")
+                    break
+                case 2:
+                    thirdAuthenticationNumber.text = sendString
+                    print("case 3")
+                    break
+                case 3:
+                    fourAuthenticationNumber.text = sendString
+                    print("case 4")
+                    break
+                case 4:
+                    fiveAuthenticationNumber.text = sendString
+                    print("case 5")
+                    break
+                case 5:
+                    sixAuthenticationNumber.text = sendString
+                    print("case 6")
+                    break
+                default:
+                    break
+                }
+                if count >= 6{
+                    count = 6
+                }else{
+                    count += 1
+                }
+                
+                print("count : \(count)")
+                
+            }
         }
+        
         checkMaxLength(textField: firstAuthenticationNumber, maxLength: 1)
 
     }
@@ -121,8 +160,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
 
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-  
         return true
     }
     
@@ -134,7 +171,3 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
     }
 
 }
-
-
-//    print(firstAuthenticationNumber.text?[(firstAuthenticationNumber.text?.index(firstAuthenticationNumber.text!.endIndex, offsetBy: 1))!]) //
-//    print(firstAuthenticationNumber.text?[(firstAuthenticationNumber.text?.index(before: firstAuthenticationNumber.text!.endIndex))!])
