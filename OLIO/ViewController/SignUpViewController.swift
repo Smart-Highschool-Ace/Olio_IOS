@@ -70,96 +70,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func firstAuthenticationNumber(_ sender: Any) {
-        let isBackSpace = strcmp(firstAuthenticationNumber.text, "\\b")
-        
-        if isBackSpace == -92 { //MARK: AuthenticationNumber 삭제
-            
-            print("지우기 전 count: \(count)")
-            
-            switch count {
-            case 1:
-                firstAuthenticationNumber.text = ""
-                count -= 1
-                break
-            case 2:
-                secondAuthenticationNumber.text = ""
-                count -= 1
-                break
-            case 3:
-                thirdAuthenticationNumber.text = ""
-                count -= 1
-                break
-            case 4:
-                fourAuthenticationNumber.text = ""
-                count -= 1
-                break
-            case 5:
-                fiveAuthenticationNumber.text = ""
-                count -= 1
-                break
-            case 6:
-                sixAuthenticationNumber.text = ""
-                count -= 1
-                break
-            default:
-                break
-            }
-        }else{ //MARK: AuthenticationNumber 입력
-            isfirstCount += 1
-            
-            if isfirstCount == 1{
-                firstNum = firstAuthenticationNumber.text!
-            }
-            
-            sendString = String(Int(firstAuthenticationNumber.text!)!%10)
-            
-            print("sendString : \(sendString)")
-            
-            if sendString != firstNum{
-                print("sendString != firstNum")
-                switch count {
-                case 1:
-                    secondAuthenticationNumber.text = sendString
-                    print("case 1")
-                    break
-                case 2:
-                    thirdAuthenticationNumber.text = sendString
-                    print("case 3")
-                    break
-                case 3:
-                    fourAuthenticationNumber.text = sendString
-                    print("case 4")
-                    break
-                case 4:
-                    fiveAuthenticationNumber.text = sendString
-                    print("case 5")
-                    break
-                case 5:
-                    sixAuthenticationNumber.text = sendString
-                    print("case 6")
-                    break
-                default:
-                    break
-                }
-                if count >= 6{
-                    count = 6
-                }else{
-                    count += 1
-                }
-                
-                print("count : \(count)")
-                
-            }
-        }
-        
-        checkMaxLength(textField: firstAuthenticationNumber, maxLength: 1)
-
-    }
-        
-
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("textField delegate entered")
+        checkMaxLength(textField: firstAuthenticationNumber, maxLength: 1)
         return true
     }
     
