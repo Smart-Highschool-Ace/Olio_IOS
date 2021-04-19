@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UITextFieldDelegate{
+class SignUpViewController: UIViewController{
     
     //MARK: Outlet var, let
     @IBOutlet weak var emailTextField: UITextField!
@@ -27,16 +27,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var sixAuthenticationNumber: UITextField!
     
     //MARK: var, let
-    var eachAuthenticationNumber = ["1"]
-    var strTest = "안녕하십니까"
-    var sendString = ""
-    var count = 1
-    var isfirstCount = 0
-    var firstNum = ""
-        
+    var currentTextfieldCount: Int = 1
+    
     //MARK: lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        firstAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        secondAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        thirdAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        fourAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        fiveAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        sixAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+        
+        firstAuthenticationNumber.becomeFirstResponder()
         
         firstAuthenticationNumber.delegate = self
         secondAuthenticationNumber.delegate = self
@@ -70,10 +76,39 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
         self.navigationController?.popViewController(animated: true)
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("textField delegate entered")
-        checkMaxLength(textField: firstAuthenticationNumber, maxLength: 1)
-        return true
+    @objc func textFieldDidChange(textField: UITextField) {
+        let isBackSpace = strcmp(textField.text, "\\b")
+        
+        if currentTextfieldCount < 6{
+            currentTextfieldCount += 1
+        }
+        
+        if textField.text!.isEmpty == true{
+            print("five")
+            fiveAuthenticationNumber.becomeFirstResponder()
+        }
+        
+        print("count : \(currentTextfieldCount)")
+        
+        switch currentTextfieldCount {
+        case 2:
+            secondAuthenticationNumber.becomeFirstResponder()
+            break
+        case 3:
+            thirdAuthenticationNumber.becomeFirstResponder()
+            break
+        case 4:
+            fourAuthenticationNumber.becomeFirstResponder()
+            break
+        case 5:
+            fiveAuthenticationNumber.becomeFirstResponder()
+            break
+        case 6:
+            sixAuthenticationNumber.becomeFirstResponder()
+            break
+        default:
+            break
+        }
     }
     
     //MARK: textfield MaxLength
@@ -82,5 +117,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate{
             textField.deleteBackward()
         }
     }
-
 }
+
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+       
+        
+        // 길이제한
+        checkMaxLength(textField: textField, maxLength: 0)
+        
+        return true
+    }
+}
+
