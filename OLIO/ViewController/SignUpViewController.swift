@@ -77,38 +77,37 @@ class SignUpViewController: UIViewController{
     }
     
     @objc func textFieldDidChange(textField: UITextField) {
-        let isBackSpace = strcmp(textField.text, "\\b")
         
         if currentTextfieldCount < 6{
             currentTextfieldCount += 1
         }
         
-        if textField.text!.isEmpty == true{
-            print("five")
-            fiveAuthenticationNumber.becomeFirstResponder()
-        }
+     
         
-        print("count : \(currentTextfieldCount)")
+            
+            print("count : \(currentTextfieldCount)")
+            
+            switch currentTextfieldCount {
+            case 2:
+                secondAuthenticationNumber.becomeFirstResponder()
+                break
+            case 3:
+                thirdAuthenticationNumber.becomeFirstResponder()
+                break
+            case 4:
+                fourAuthenticationNumber.becomeFirstResponder()
+                break
+            case 5:
+                fiveAuthenticationNumber.becomeFirstResponder()
+                break
+            case 6:
+                sixAuthenticationNumber.becomeFirstResponder()
+                break
+            default:
+                break
+            }
         
-        switch currentTextfieldCount {
-        case 2:
-            secondAuthenticationNumber.becomeFirstResponder()
-            break
-        case 3:
-            thirdAuthenticationNumber.becomeFirstResponder()
-            break
-        case 4:
-            fourAuthenticationNumber.becomeFirstResponder()
-            break
-        case 5:
-            fiveAuthenticationNumber.becomeFirstResponder()
-            break
-        case 6:
-            sixAuthenticationNumber.becomeFirstResponder()
-            break
-        default:
-            break
-        }
+        
     }
     
     //MARK: textfield MaxLength
@@ -122,7 +121,40 @@ class SignUpViewController: UIViewController{
 extension SignUpViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-       
+        if let char = string.cString(using: String.Encoding.utf8){
+            let isBackSpace = strcmp(char, "\\b")
+            if isBackSpace == -92{
+                print("isBackSpace")
+                print("currentTextfieldCount > \(currentTextfieldCount)")
+                switch currentTextfieldCount      {
+                case 2:
+                    break
+                case 3:
+                    currentTextfieldCount -= 1
+                    print("after currentTextfieldCount\(currentTextfieldCount)")
+                    secondAuthenticationNumber.becomeFirstResponder()
+                    break
+                case 4:
+                    currentTextfieldCount -= 1
+                    print("after currentTextfieldCount\(currentTextfieldCount)")
+                    thirdAuthenticationNumber.becomeFirstResponder()
+                    break
+                case 5:
+                    currentTextfieldCount -= 1
+                    print("after currentTextfieldCount\(currentTextfieldCount)")
+                    fourAuthenticationNumber.becomeFirstResponder()
+                    break
+                case 6:
+                    currentTextfieldCount -= 1
+                    print("after currentTextfieldCount\(currentTextfieldCount)")
+                    fiveAuthenticationNumber.becomeFirstResponder()
+                    break
+                default:
+                    break
+                }
+                return true
+            }
+        }
         
         // 길이제한
         checkMaxLength(textField: textField, maxLength: 0)

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 var currentView: String = ""
 
@@ -34,6 +35,14 @@ class DescriptionViewController: UIViewController{
             let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(DescriptionViewController.respondToSwipeGesture(_:)))
                 swipeRight.direction = UISwipeGestureRecognizer.Direction.right
                 self.view.addGestureRecognizer(swipeRight)
+        
+        // 요소 휴대폰 별 위치 잡기
+        DescriptionImageSnapKit()
+        DescriptionTextSnapKit()
+        DescriptionsecondPageController()
+        DescriptionFirstPagecontroller()
+        DescriptionThirdPagecontroller()
+        DescriptionNextButton()
     }
     
     //MARK: respondToSwipeGesture
@@ -140,6 +149,56 @@ class DescriptionViewController: UIViewController{
                 default:
                     break
             }
+        }
+    }
+    
+    func DescriptionImageSnapKit(){
+        DescriptionImage.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-70)
+            make.width.equalTo(166)
+            make.height.equalTo(149)
+        }
+    }
+    
+    func DescriptionTextSnapKit(){
+        DescriptionText.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(DescriptionImage.snp.bottom).offset(30)
+            make.width.equalTo(250)
+            make.height.equalTo(86)
+        }
+    }
+    
+    func DescriptionsecondPageController(){
+        secondPageController.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(DescriptionText.snp.bottom).offset(50)
+            make.width.height.equalTo(10)
+        }
+    }
+    
+    func DescriptionFirstPagecontroller(){
+        firstPageController.snp.makeConstraints { (make) in
+            make.right.equalTo(secondPageController.snp.left).offset(-10)
+            make.centerY.equalTo(secondPageController)
+            make.width.height.equalTo(10)
+        }
+    }
+    
+    func DescriptionThirdPagecontroller(){
+        thirdPageController.snp.makeConstraints { (make) in
+            make.left.equalTo(secondPageController.snp.right).offset(10)
+            make.centerY.equalTo(secondPageController)
+            make.width.height.equalTo(10)
+        }
+    }
+    
+    func DescriptionNextButton(){
+        nextButton.snp.makeConstraints { (make) in
+            make.bottom.equalTo(self.view.snp.bottom).inset(30)
+            make.centerX.equalToSuperview()
+            make.width.height.equalTo(74)
         }
     }
 }
