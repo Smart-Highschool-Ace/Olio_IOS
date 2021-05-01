@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class SignUpViewController: UIViewController{
     
@@ -13,12 +14,11 @@ class SignUpViewController: UIViewController{
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwardTextField: UITextField!
     @IBOutlet weak var passwardCheckTextField: UITextField!
-    
+    @IBOutlet weak var signIntopDecorations: UIImageView!
+    @IBOutlet weak var signInDownDecorations: UIImageView!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var haveAccount: UIButton!
-    
     @IBOutlet weak var emailView: UIView!
-    
     @IBOutlet weak var firstAuthenticationNumber: UITextField!
     @IBOutlet weak var secondAuthenticationNumber: UITextField!
     @IBOutlet weak var thirdAuthenticationNumber: UITextField!
@@ -32,8 +32,6 @@ class SignUpViewController: UIViewController{
     //MARK: lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         firstAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         secondAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
@@ -61,6 +59,8 @@ class SignUpViewController: UIViewController{
         
         emailView.isHidden = true
         
+        SignIntopDecorationsSnapKit()
+        SignInDownDecorationsSnapKit()
     }
     
     @IBAction func email(_ sender: Any) {
@@ -114,6 +114,25 @@ class SignUpViewController: UIViewController{
     func checkMaxLength(textField: UITextField!, maxLength: Int) {
         if (textField.text?.count ?? 0 > maxLength) {
             textField.deleteBackward()
+        }
+    }
+    
+    //MARK: SnapKit - TopDecoration
+    func SignIntopDecorationsSnapKit(){
+        signIntopDecorations.snp.makeConstraints { (make) in
+            make.top.equalToSuperview()
+            make.left.right.equalToSuperview()
+            make.height.equalTo(289)
+        }
+    }
+    
+    //MARK: SnapKit - DownDecoration
+    func SignInDownDecorationsSnapKit(){
+        signInDownDecorations.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview()
+            make.right.equalToSuperview()
+            make.left.equalToSuperview().offset(-60)
+            make.height.equalTo(370)
         }
     }
 }

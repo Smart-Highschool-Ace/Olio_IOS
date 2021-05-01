@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hfQ-2B-nU5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7T4-TK-vHt">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -80,92 +80,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Vector_Up" translatesAutoresizingMaskIntoConstraints="NO" id="nsg-eH-JfB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Vector_Up" translatesAutoresizingMaskIntoConstraints="NO" id="nsg-eH-JfB">
                                 <rect key="frame" x="-8" y="0.0" width="390" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="289" id="2HL-Op-Xea"/>
-                                    <constraint firstAttribute="width" constant="390" id="hOc-r0-ELR"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Vector_Down" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-Uj-MWS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Vector_Down" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-Uj-MWS">
                                 <rect key="frame" x="49" y="442" width="376" height="370"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="376" id="9Qv-09-KNS"/>
-                                    <constraint firstAttribute="height" constant="370" id="Mya-zN-Z5b"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_SignIn_Label" translatesAutoresizingMaskIntoConstraints="NO" id="khB-AG-HLt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_SignIn_Label" translatesAutoresizingMaskIntoConstraints="NO" id="khB-AG-HLt">
                                 <rect key="frame" x="255" y="186" width="75" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="JB8-hX-w8c"/>
-                                    <constraint firstAttribute="height" constant="22" id="uK6-DQ-G99"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bl-ha-XIC">
-                                <rect key="frame" x="49" y="451" width="16" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="6mr-eP-bW1"/>
-                                    <constraint firstAttribute="width" constant="16" id="x4F-kY-bhN"/>
-                                </constraints>
-                                <state key="normal" image="Olio_Check_Box"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Green_Line" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-Z2-Eyb">
-                                <rect key="frame" x="49" y="367" width="278" height="4"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="4" id="HFW-Ha-Sds"/>
-                                    <constraint firstAttribute="width" constant="278" id="Yq2-9r-Vnd"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Gray_Line" translatesAutoresizingMaskIntoConstraints="NO" id="hZr-wm-Kti">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Gray_Line" translatesAutoresizingMaskIntoConstraints="NO" id="hZr-wm-Kti">
                                 <rect key="frame" x="49" y="434" width="278" height="4"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="4" id="Fc4-ht-TX8"/>
-                                    <constraint firstAttribute="width" constant="278" id="P6O-6g-KOd"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Email" translatesAutoresizingMaskIntoConstraints="NO" id="avQ-4Z-SDp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Email" translatesAutoresizingMaskIntoConstraints="NO" id="avQ-4Z-SDp">
                                 <rect key="frame" x="49" y="313" width="37" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="37" id="FpT-Fb-SPU"/>
-                                    <constraint firstAttribute="height" constant="20" id="WtY-Rl-XA6"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Id" translatesAutoresizingMaskIntoConstraints="NO" id="Sqm-u1-PGD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Id" translatesAutoresizingMaskIntoConstraints="NO" id="Sqm-u1-PGD">
                                 <rect key="frame" x="70" y="451" width="56" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="56" id="0PB-fV-BbP"/>
-                                    <constraint firstAttribute="height" constant="16" id="KFf-Pg-Ts0"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.76863271" green="0.76861804720000004" blue="0.76862806080000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_SignIn" translatesAutoresizingMaskIntoConstraints="NO" id="9w1-To-Tqa">
                                 <rect key="frame" x="163" y="579" width="48" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcX-hO-1pJ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcX-hO-1pJ">
                                 <rect key="frame" x="49" y="563" width="277" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="277" id="MIb-dI-WHy"/>
-                                    <constraint firstAttribute="height" constant="51" id="gPu-rM-qqp"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Olio_Green_Button"/>
                                 <connections>
                                     <action selector="signInButton:" destination="7T4-TK-vHt" eventType="touchUpInside" id="UeM-Fy-FIE"/>
-                                    <segue destination="F0V-nJ-5V0" kind="push" id="ynw-wT-4r2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_SignIn" translatesAutoresizingMaskIntoConstraints="NO" id="JKK-ar-5wc">
-                                <rect key="frame" x="163" y="576" width="49" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="19" id="CcX-0o-Thj"/>
-                                    <constraint firstAttribute="width" constant="49" id="yF3-D6-MtZ"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGq-Mw-rD4">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGq-Mw-rD4">
                                 <rect key="frame" x="49" y="668" width="116" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="12" id="XV0-OT-OjP"/>
-                                    <constraint firstAttribute="width" constant="116" id="XYr-jD-iwS"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Olio_No_Account"/>
                                 <connections>
                                     <segue destination="ejG-Wa-KMh" kind="push" id="2h7-jc-8rh"/>
@@ -174,21 +128,24 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="s19020@gsm.hs.kr" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LpB-6U-9I7">
                                 <rect key="frame" x="49" y="333" width="277" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUd-Wd-8sS">
                                 <rect key="frame" x="49" y="403" width="277" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMw-4F-fa6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Green_Line" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-Z2-Eyb">
+                                <rect key="frame" x="49" y="367" width="278" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMw-4F-fa6">
                                 <rect key="frame" x="49" y="480" width="84" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="3rv-Ya-mVE"/>
-                                    <constraint firstAttribute="height" constant="24" id="BGO-4S-dxb"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <state key="normal" title="아이디/비밀번호 찾기">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -200,44 +157,26 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qfp-bG-8dR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Sqm-u1-PGD" firstAttribute="leading" secondItem="qfp-bG-8dR" secondAttribute="leading" constant="70" id="0dX-PT-DKD"/>
-                            <constraint firstItem="CMw-4F-fa6" firstAttribute="top" secondItem="1Bl-ha-XIC" secondAttribute="bottom" constant="13" id="36e-3A-1Kc"/>
-                            <constraint firstItem="avQ-4Z-SDp" firstAttribute="leading" secondItem="qfp-bG-8dR" secondAttribute="leading" constant="49" id="5XU-cA-sBg"/>
-                            <constraint firstItem="nsg-eH-JfB" firstAttribute="top" secondItem="Efe-Gw-tnD" secondAttribute="top" id="79j-g5-SAO"/>
-                            <constraint firstItem="JKK-ar-5wc" firstAttribute="leading" secondItem="qfp-bG-8dR" secondAttribute="leading" constant="163" id="AUJ-S9-HNb"/>
-                            <constraint firstItem="0t0-Z2-Eyb" firstAttribute="top" secondItem="qfp-bG-8dR" secondAttribute="top" constant="323" id="AWe-Ev-M43"/>
-                            <constraint firstItem="nsg-eH-JfB" firstAttribute="leading" secondItem="Efe-Gw-tnD" secondAttribute="leading" constant="-8" id="CwU-U7-EJO"/>
-                            <constraint firstItem="0t0-Z2-Eyb" firstAttribute="leading" secondItem="qfp-bG-8dR" secondAttribute="leading" constant="49" id="HFY-XR-Qdv"/>
-                            <constraint firstItem="qfp-bG-8dR" firstAttribute="bottom" secondItem="AGq-Mw-rD4" secondAttribute="bottom" constant="98" id="Ncu-p1-1Xb"/>
-                            <constraint firstItem="Sqm-u1-PGD" firstAttribute="top" secondItem="qfp-bG-8dR" secondAttribute="top" constant="407" id="OeD-K6-1Uf"/>
-                            <constraint firstItem="khB-AG-HLt" firstAttribute="top" secondItem="qfp-bG-8dR" secondAttribute="top" constant="142" id="RCt-7U-Ci6"/>
-                            <constraint firstItem="CMw-4F-fa6" firstAttribute="leading" secondItem="qfp-bG-8dR" secondAttribute="leading" constant="49" id="RRm-5Y-QUi"/>
-                            <constraint firstItem="avQ-4Z-SDp" firstAttribute="top" secondItem="qfp-bG-8dR" secondAttribute="top" constant="269" id="Rd6-M8-yoX"/>
-                            <constraint firstItem="qcX-hO-1pJ" firstAttribute="leading" secondItem="qfp-bG-8dR" secondAttribute="leading" constant="49" id="V3F-wu-iuW"/>
-                            <constraint firstItem="qcX-hO-1pJ" firstAttribute="top" secondItem="qfp-bG-8dR" secondAttribute="top" constant="519" id="cph-Nj-ZXF"/>
-                            <constraint firstItem="qfp-bG-8dR" firstAttribute="trailing" secondItem="qcX-hO-1pJ" secondAttribute="trailing" constant="49" id="etV-Bq-M8S"/>
-                            <constraint firstItem="hZr-wm-Kti" firstAttribute="leading" secondItem="qfp-bG-8dR" secondAttribute="leading" constant="49" id="fo8-Id-8tt"/>
-                            <constraint firstItem="JKK-ar-5wc" firstAttribute="top" secondItem="qfp-bG-8dR" secondAttribute="top" constant="532" id="gMy-sj-bNa"/>
-                            <constraint firstItem="qfp-bG-8dR" firstAttribute="trailing" secondItem="hZr-wm-Kti" secondAttribute="trailing" constant="48" id="gx7-AB-JK4"/>
-                            <constraint firstItem="1Bl-ha-XIC" firstAttribute="leading" secondItem="qfp-bG-8dR" secondAttribute="leading" constant="49" id="iZT-WF-zjc"/>
-                            <constraint firstAttribute="trailing" secondItem="3aa-Uj-MWS" secondAttribute="trailing" constant="-50" id="j9T-09-9WD"/>
-                            <constraint firstItem="qfp-bG-8dR" firstAttribute="trailing" secondItem="0t0-Z2-Eyb" secondAttribute="trailing" constant="48" id="kxE-Dc-SgR"/>
-                            <constraint firstItem="1Bl-ha-XIC" firstAttribute="top" secondItem="qfp-bG-8dR" secondAttribute="top" constant="407" id="pEC-PD-ldS"/>
-                            <constraint firstItem="AGq-Mw-rD4" firstAttribute="leading" secondItem="qfp-bG-8dR" secondAttribute="leading" constant="49" id="pxh-CC-BoV"/>
-                            <constraint firstItem="hZr-wm-Kti" firstAttribute="top" secondItem="0t0-Z2-Eyb" secondAttribute="bottom" constant="63" id="sNr-tv-Szv"/>
-                            <constraint firstAttribute="bottom" secondItem="3aa-Uj-MWS" secondAttribute="bottom" id="skC-o0-3pF"/>
-                            <constraint firstItem="qfp-bG-8dR" firstAttribute="trailing" secondItem="JKK-ar-5wc" secondAttribute="trailing" constant="163" id="uvI-Nc-FKO"/>
-                            <constraint firstItem="qfp-bG-8dR" firstAttribute="trailing" secondItem="khB-AG-HLt" secondAttribute="trailing" constant="45" id="xkW-OF-6kl"/>
-                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nsg-eH-JfB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="WdH-vW-mgR"/>
                     <connections>
                         <outlet property="emailTextField" destination="LpB-6U-9I7" id="vee-r1-AHN"/>
-                        <outlet property="idStoreButton" destination="1Bl-ha-XIC" id="Wsd-wS-UvA"/>
+                        <outlet property="emailTitle" destination="avQ-4Z-SDp" id="qmQ-f1-aqe"/>
+                        <outlet property="emailUnderLine" destination="0t0-Z2-Eyb" id="kcq-tt-Zyi"/>
+                        <outlet property="findIdPassward" destination="CMw-4F-fa6" id="j1Y-8h-keN"/>
+                        <outlet property="idSaveLabel" destination="Sqm-u1-PGD" id="x5m-ra-yJG"/>
                         <outlet property="noAccountButton" destination="AGq-Mw-rD4" id="3ef-Wq-7tE"/>
                         <outlet property="passwardTextField" destination="mUd-Wd-8sS" id="HJ9-0f-eK4"/>
+                        <outlet property="passwardUnderLine" destination="hZr-wm-Kti" id="FfI-sG-JVV"/>
                         <outlet property="signInButton" destination="qcX-hO-1pJ" id="R0n-Oh-6eh"/>
+                        <outlet property="signInDownDecorations" destination="3aa-Uj-MWS" id="AiP-uM-gX4"/>
+                        <outlet property="signInTitle" destination="khB-AG-HLt" id="XOa-gh-hDZ"/>
+                        <outlet property="signIntopDecorations" destination="nsg-eH-JfB" id="JeP-c5-JsT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3y0-Cv-V82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -252,7 +191,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Vector_Up_SignUp" translatesAutoresizingMaskIntoConstraints="NO" id="xkq-u2-MZr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Vector_Up_SignUp" translatesAutoresizingMaskIntoConstraints="NO" id="xkq-u2-MZr">
                                 <rect key="frame" x="-6" y="0.0" width="386" height="285"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -327,7 +266,7 @@
                                 <rect key="frame" x="49" y="437" width="244" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-Rc-gkV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-Rc-gkV">
                                 <rect key="frame" x="38" y="196" width="297" height="420"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -427,6 +366,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mh7-73-g0F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ryj-Rc-gkV"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="zht-nC-Nmc"/>
                     <connections>
@@ -439,6 +383,8 @@
                         <outlet property="passwardCheckTextField" destination="Lr9-rM-yvP" id="hBT-1n-Wgh"/>
                         <outlet property="passwardTextField" destination="rBE-nS-ajT" id="Lew-Eu-e8k"/>
                         <outlet property="secondAuthenticationNumber" destination="7O9-uR-Nlo" id="Os3-6v-ygu"/>
+                        <outlet property="signInDownDecorations" destination="TTs-oc-sDr" id="zaT-fm-Bdc"/>
+                        <outlet property="signIntopDecorations" destination="xkq-u2-MZr" id="cE1-bQ-qjx"/>
                         <outlet property="signUpButton" destination="JSv-5f-4bC" id="fqo-yx-G9U"/>
                         <outlet property="sixAuthenticationNumber" destination="8q1-ix-siB" id="kAh-dG-kTf"/>
                         <outlet property="thirdAuthenticationNumber" destination="JCY-We-aGx" id="xNY-fg-QLG"/>
@@ -698,25 +644,25 @@
             <objects>
                 <viewController id="uvY-eb-tHe" customClass="MainViewController" customModule="OLIO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CzY-gr-Gqc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-dH-vCV">
-                                <rect key="frame" x="26" y="68" width="55" height="29"/>
+                                <rect key="frame" x="26" y="24" width="55" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="0m0-gF-0DW"/>
                                     <constraint firstAttribute="width" constant="55" id="0to-iz-8hM"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Search_TextField_UnderLine" translatesAutoresizingMaskIntoConstraints="NO" id="IvX-Tz-bLM">
-                                <rect key="frame" x="61" y="149" width="253" height="8"/>
+                                <rect key="frame" x="61" y="105" width="253" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="253" id="MBx-er-TWg"/>
                                     <constraint firstAttribute="height" constant="8" id="W6m-BR-7lP"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iVh-kk-Lyp">
-                                <rect key="frame" x="55" y="128.33333333333334" width="28" height="14"/>
+                                <rect key="frame" x="55" y="84.333333333333329" width="28" height="14"/>
                                 <color key="tintColor" red="0.59608256820000005" green="0.59607106450000003" blue="0.59607887270000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16.329999999999998" id="XDF-vi-pLy"/>
@@ -724,7 +670,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Button_Background" translatesAutoresizingMaskIntoConstraints="NO" id="itd-v4-ids">
-                                <rect key="frame" x="172" y="194" width="30" height="16"/>
+                                <rect key="frame" x="172" y="150" width="30" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="HZN-xN-EdO"/>
                                     <constraint firstAttribute="height" constant="16" id="OVk-kh-6Zy"/>
@@ -739,7 +685,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjP-DT-ZGY">
-                                <rect key="frame" x="316" y="65" width="40" height="40"/>
+                                <rect key="frame" x="316" y="21" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CEY-mq-kl1"/>
                                     <constraint firstAttribute="height" constant="40" id="HcT-VU-igx"/>
@@ -750,14 +696,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Green_Portfolio" translatesAutoresizingMaskIntoConstraints="NO" id="Jcw-hQ-RKL">
-                                <rect key="frame" x="121" y="195" width="47" height="10"/>
+                                <rect key="frame" x="121" y="151" width="47" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="emA-7o-w55"/>
                                     <constraint firstAttribute="height" constant="10" id="oUe-Oc-cu7"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_White_Project" translatesAutoresizingMaskIntoConstraints="NO" id="lcY-S9-xRP">
-                                <rect key="frame" x="208" y="195" width="39" height="11"/>
+                                <rect key="frame" x="208" y="151" width="39" height="11"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="11" id="KfZ-sq-DKl"/>
                                     <constraint firstAttribute="width" constant="39" id="ptM-eN-Zvy"/>
@@ -2205,7 +2151,6 @@
         <image name="Olio_Android_Logo" width="512" height="512"/>
         <image name="Olio_Bell" width="512" height="512"/>
         <image name="Olio_Button_Background" width="882" height="512"/>
-        <image name="Olio_Check_Box" width="512" height="512"/>
         <image name="Olio_Complete" width="1280" height="512"/>
         <image name="Olio_Content_Textfield" width="977" height="512"/>
         <image name="Olio_Current_View" width="512" height="512"/>

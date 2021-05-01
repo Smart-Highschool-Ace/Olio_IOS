@@ -43,6 +43,7 @@ class DescriptionViewController: UIViewController{
         DescriptionFirstPagecontroller()
         DescriptionThirdPagecontroller()
         DescriptionNextButton()
+        DescriptionSkip()
     }
     
     //MARK: respondToSwipeGesture
@@ -149,6 +150,15 @@ class DescriptionViewController: UIViewController{
                 default:
                     break
             }
+        }
+    }
+    
+    func DescriptionSkip(){
+        skipButton.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaLayoutGuide).inset(20)
+            make.right.equalToSuperview().inset(18)
+            make.height.equalTo(16)
+            make.width.equalTo(35)
         }
     }
     
