@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7T4-TK-vHt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hfQ-2B-nU5">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -80,7 +80,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Vector_Up" translatesAutoresizingMaskIntoConstraints="NO" id="nsg-eH-JfB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Vector_Up" translatesAutoresizingMaskIntoConstraints="NO" id="nsg-eH-JfB">
                                 <rect key="frame" x="-8" y="0.0" width="390" height="289"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -105,16 +105,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.76863271" green="0.76861804720000004" blue="0.76862806080000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_SignIn" translatesAutoresizingMaskIntoConstraints="NO" id="9w1-To-Tqa">
-                                <rect key="frame" x="163" y="579" width="48" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcX-hO-1pJ">
                                 <rect key="frame" x="49" y="563" width="277" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Olio_Green_Button"/>
                                 <connections>
                                     <action selector="signInButton:" destination="7T4-TK-vHt" eventType="touchUpInside" id="UeM-Fy-FIE"/>
+                                    <segue destination="F0V-nJ-5V0" kind="push" id="tnx-tg-ktr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGq-Mw-rD4">
@@ -155,13 +152,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="qfp-bG-8dR"/>
+                        <viewLayoutGuide key="safeArea" id="pkw-Tx-jTR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="nsg-eH-JfB"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="WdH-vW-mgR"/>
                     <connections>
@@ -220,10 +212,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Olio_Green_Button"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_White_SignUp" translatesAutoresizingMaskIntoConstraints="NO" id="DYq-sQ-KXV">
-                                <rect key="frame" x="161" y="576" width="53" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Email" translatesAutoresizingMaskIntoConstraints="NO" id="SPT-Ji-yvb">
                                 <rect key="frame" x="49" y="313" width="37" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -245,6 +233,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rBE-nS-ajT">
                                 <rect key="frame" x="49" y="399" width="277" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -259,135 +248,37 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Olio_ Duplicate_verification"/>
                                 <connections>
-                                    <action selector="email:" destination="ejG-Wa-KMh" eventType="touchUpInside" id="2L1-w8-JCr"/>
+                                    <action selector="CheckDuplicatesButton:" destination="ejG-Wa-KMh" eventType="touchUpInside" id="2L1-w8-JCr"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Passward_Error" translatesAutoresizingMaskIntoConstraints="NO" id="9X8-5Q-Fen">
-                                <rect key="frame" x="49" y="437" width="244" height="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호는 8~16자 사이여야되며, 특수문자를 포함해야합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCl-w1-Lbj">
+                                <rect key="frame" x="49" y="438" width="250" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryj-Rc-gkV">
-                                <rect key="frame" x="38" y="196" width="297" height="420"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일 인증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0E7-KP-vRS">
-                                        <rect key="frame" x="31" y="43" width="82" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sZ-eP-SgQ">
-                                        <rect key="frame" x="198" y="96" width="57" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Olio_Resend_Num"/>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Find_Id_Pw" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-pr-myP">
-                                        <rect key="frame" x="123" y="124" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVy-QW-Nfg">
-                                        <rect key="frame" x="18" y="182" width="260" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">인증 메일을 발송했습니다.
-메일함을 확인하여 이메일 인증코드를 입력해주세요. </string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="인증번호 6자리를 입력해주세요." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGy-r1-xxZ">
-                                        <rect key="frame" x="18" y="243" width="260" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="textColor" red="0.64342229350000002" green="0.64031397320000005" blue="0.64653061379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Num_TextField" translatesAutoresizingMaskIntoConstraints="NO" id="q9s-ed-DY3">
-                                        <rect key="frame" x="31" y="278" width="240" height="43"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qa4-pq-4J8">
-                                        <rect key="frame" x="116" y="355" width="65" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Olio_Complete"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STf-8q-pe3">
-                                        <rect key="frame" x="214" y="16" width="64" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <state key="normal" title="이메일 수정하기">
-                                            <color key="titleColor" red="0.59498364997632569" green="0.59498364997632569" blue="0.59498364997632569" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="modifyEmail:" destination="ejG-Wa-KMh" eventType="touchUpInside" id="Ey1-wE-VSJ"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWe-Rq-A1d">
-                                        <rect key="frame" x="31" y="282" width="35" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JCY-We-aGx">
-                                        <rect key="frame" x="114" y="282" width="35" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9j-8S-HAj">
-                                        <rect key="frame" x="155" y="282" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p2X-ia-hdV">
-                                        <rect key="frame" x="196" y="282" width="35" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q1-ix-siB">
-                                        <rect key="frame" x="237" y="282" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7O9-uR-Nlo">
-                                        <rect key="frame" x="72" y="282" width="34" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mh7-73-g0F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="ryj-Rc-gkV"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="zht-nC-Nmc"/>
+                    <size key="freeformSize" width="375" height="812"/>
                     <connections>
+                        <outlet property="checkDuplicates" destination="Nya-a1-R4j" id="ewa-Y2-Rxc"/>
                         <outlet property="emailTextField" destination="Rzu-Xn-kKo" id="2NM-Mq-SkM"/>
-                        <outlet property="emailView" destination="ryj-Rc-gkV" id="w4j-j5-avL"/>
-                        <outlet property="firstAuthenticationNumber" destination="GWe-Rq-A1d" id="fTw-Ds-Fyt"/>
-                        <outlet property="fiveAuthenticationNumber" destination="p2X-ia-hdV" id="Oa8-ja-8C8"/>
-                        <outlet property="fourAuthenticationNumber" destination="e9j-8S-HAj" id="jVD-cP-By8"/>
+                        <outlet property="emailTitle" destination="SPT-Ji-yvb" id="h73-4k-4qr"/>
+                        <outlet property="emailUnderLine" destination="xlt-i9-yvG" id="UTg-uP-fK7"/>
                         <outlet property="haveAccount" destination="yR6-fN-ik6" id="Ylu-Qp-4wy"/>
                         <outlet property="passwardCheckTextField" destination="Lr9-rM-yvP" id="hBT-1n-Wgh"/>
+                        <outlet property="passwardCheckUnderLine" destination="e5r-Xh-zIL" id="hdL-JO-tre"/>
                         <outlet property="passwardTextField" destination="rBE-nS-ajT" id="Lew-Eu-e8k"/>
-                        <outlet property="secondAuthenticationNumber" destination="7O9-uR-Nlo" id="Os3-6v-ygu"/>
+                        <outlet property="passwardTextFieldCondition" destination="eCl-w1-Lbj" id="wnG-ti-NJB"/>
+                        <outlet property="passwardUnderLine" destination="dQt-6j-gzN" id="QlG-6U-I6B"/>
                         <outlet property="signInDownDecorations" destination="TTs-oc-sDr" id="zaT-fm-Bdc"/>
                         <outlet property="signIntopDecorations" destination="xkq-u2-MZr" id="cE1-bQ-qjx"/>
                         <outlet property="signUpButton" destination="JSv-5f-4bC" id="fqo-yx-G9U"/>
-                        <outlet property="sixAuthenticationNumber" destination="8q1-ix-siB" id="kAh-dG-kTf"/>
-                        <outlet property="thirdAuthenticationNumber" destination="JCY-We-aGx" id="xNY-fg-QLG"/>
+                        <outlet property="signUpTitle" destination="iDu-ib-zOR" id="7AP-qk-Ozs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2Z-fB-aHz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -644,25 +535,25 @@
             <objects>
                 <viewController id="uvY-eb-tHe" customClass="MainViewController" customModule="OLIO" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CzY-gr-Gqc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-dH-vCV">
-                                <rect key="frame" x="26" y="24" width="55" height="29"/>
+                                <rect key="frame" x="26" y="68" width="55" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="0m0-gF-0DW"/>
                                     <constraint firstAttribute="width" constant="55" id="0to-iz-8hM"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Search_TextField_UnderLine" translatesAutoresizingMaskIntoConstraints="NO" id="IvX-Tz-bLM">
-                                <rect key="frame" x="61" y="105" width="253" height="8"/>
+                                <rect key="frame" x="61" y="149" width="253" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="253" id="MBx-er-TWg"/>
                                     <constraint firstAttribute="height" constant="8" id="W6m-BR-7lP"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iVh-kk-Lyp">
-                                <rect key="frame" x="55" y="84.333333333333329" width="28" height="14"/>
+                                <rect key="frame" x="55" y="128.33333333333334" width="28" height="14"/>
                                 <color key="tintColor" red="0.59608256820000005" green="0.59607106450000003" blue="0.59607887270000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16.329999999999998" id="XDF-vi-pLy"/>
@@ -670,7 +561,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Button_Background" translatesAutoresizingMaskIntoConstraints="NO" id="itd-v4-ids">
-                                <rect key="frame" x="172" y="150" width="30" height="16"/>
+                                <rect key="frame" x="172" y="194" width="30" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="HZN-xN-EdO"/>
                                     <constraint firstAttribute="height" constant="16" id="OVk-kh-6Zy"/>
@@ -685,7 +576,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjP-DT-ZGY">
-                                <rect key="frame" x="316" y="21" width="40" height="40"/>
+                                <rect key="frame" x="316" y="65" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CEY-mq-kl1"/>
                                     <constraint firstAttribute="height" constant="40" id="HcT-VU-igx"/>
@@ -696,14 +587,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_Green_Portfolio" translatesAutoresizingMaskIntoConstraints="NO" id="Jcw-hQ-RKL">
-                                <rect key="frame" x="121" y="151" width="47" height="10"/>
+                                <rect key="frame" x="121" y="195" width="47" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="emA-7o-w55"/>
                                     <constraint firstAttribute="height" constant="10" id="oUe-Oc-cu7"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Olio_White_Project" translatesAutoresizingMaskIntoConstraints="NO" id="lcY-S9-xRP">
-                                <rect key="frame" x="208" y="151" width="39" height="11"/>
+                                <rect key="frame" x="208" y="195" width="39" height="11"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="11" id="KfZ-sq-DKl"/>
                                     <constraint firstAttribute="width" constant="39" id="ptM-eN-Zvy"/>
@@ -1917,6 +1808,131 @@
             </objects>
             <point key="canvasLocation" x="1533.5999999999999" y="806.89655172413802"/>
         </scene>
+        <!--CheckDuplicatesViewCotroller-->
+        <scene sceneID="IEp-n8-XZz">
+            <objects>
+                <viewController storyboardIdentifier="CheckDuplicatesViewCotroller" title="CheckDuplicatesViewCotroller" id="a2R-UK-Qd9" customClass="CheckDuplicatesViewCotroller" customModule="OLIO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I98-Qb-ekk">
+                        <rect key="frame" x="0.0" y="0.0" width="297" height="420"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aS-0P-44r">
+                                <rect key="frame" x="0.0" y="0.0" width="297" height="420"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일 인증" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynm-sb-FLB">
+                                        <rect key="frame" x="31" y="43" width="82" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8P-Q0-XOK">
+                                        <rect key="frame" x="198" y="96" width="57" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Olio_Resend_Num"/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Find_Id_Pw" translatesAutoresizingMaskIntoConstraints="NO" id="nMC-b6-j2o">
+                                        <rect key="frame" x="123" y="124" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l65-rw-X3X">
+                                        <rect key="frame" x="18" y="182" width="260" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">인증 메일을 발송했습니다.
+메일함을 확인하여 이메일 인증코드를 입력해주세요. </string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="인증번호 6자리를 입력해주세요." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hg-wn-4p9">
+                                        <rect key="frame" x="18" y="243" width="260" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" red="0.64342229350000002" green="0.64031397320000005" blue="0.64653061379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Olio_Num_TextField" translatesAutoresizingMaskIntoConstraints="NO" id="u6z-p8-fcT">
+                                        <rect key="frame" x="31" y="278" width="240" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1R-uq-gHx">
+                                        <rect key="frame" x="116" y="355" width="65" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Olio_Complete"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYb-vh-cl6">
+                                        <rect key="frame" x="214" y="16" width="64" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="이메일 수정하기">
+                                            <color key="titleColor" red="0.59498364999999998" green="0.59498364999999998" blue="0.59498364999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailModify:" destination="a2R-UK-Qd9" eventType="touchUpInside" id="U6M-mY-bYC"/>
+                                            <action selector="modifyEmail:" destination="ejG-Wa-KMh" eventType="touchUpInside" id="pdU-Et-Cai"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Xm-Nz-lur">
+                                        <rect key="frame" x="31" y="282" width="35" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-c0-jwJ">
+                                        <rect key="frame" x="114" y="282" width="35" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oDg-dg-wEO">
+                                        <rect key="frame" x="155" y="282" width="34" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FY3-EI-GoQ">
+                                        <rect key="frame" x="196" y="282" width="35" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ax2-2e-qCi">
+                                        <rect key="frame" x="237" y="282" width="34" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4K-6F-Vgw">
+                                        <rect key="frame" x="72" y="282" width="34" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JTP-HL-0Gf"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <size key="freeformSize" width="297" height="420"/>
+                    <connections>
+                        <outlet property="emailView" destination="8aS-0P-44r" id="UMD-dc-R1C"/>
+                        <outlet property="firstAuthenticationNumber" destination="4Xm-Nz-lur" id="ZSF-fv-nx6"/>
+                        <outlet property="fiveAuthenticationNumber" destination="FY3-EI-GoQ" id="8wu-bp-f4a"/>
+                        <outlet property="fourAuthenticationNumber" destination="oDg-dg-wEO" id="AGE-Hs-0tA"/>
+                        <outlet property="secondAuthenticationNumber" destination="f4K-6F-Vgw" id="gCC-5D-aAc"/>
+                        <outlet property="sixAuthenticationNumber" destination="ax2-2e-qCi" id="sdk-Mp-ZJr"/>
+                        <outlet property="thirdAuthenticationNumber" destination="gZY-c0-jwJ" id="Nie-wR-4CD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCO-cY-QC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313" y="1023"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pgG-jL-YPC">
             <objects>
@@ -2178,7 +2194,6 @@
         <image name="Olio_Num_TextField" width="2947" height="512"/>
         <image name="Olio_ONDO_Logo" width="72" height="80"/>
         <image name="Olio_OneLine_Introduce" width="1908" height="512"/>
-        <image name="Olio_Passward_Error" width="12390" height="512"/>
         <image name="Olio_PeoPle" width="512" height="512"/>
         <image name="Olio_Photo-1" width="512" height="512"/>
         <image name="Olio_Photo_Add" width="512" height="512"/>
@@ -2192,7 +2207,6 @@
         <image name="Olio_Resend_Num" width="1390" height="512"/>
         <image name="Olio_Search" width="1769" height="512"/>
         <image name="Olio_Search_TextField_UnderLine" width="32768" height="131"/>
-        <image name="Olio_SignIn" width="512" height="153"/>
         <image name="Olio_SignIn_Label" width="1699" height="512"/>
         <image name="Olio_SignUp" width="1908" height="512"/>
         <image name="Olio_Skip" width="1056" height="512"/>
@@ -2205,7 +2219,6 @@
         <image name="Olio_Vector_Up" width="676" height="512"/>
         <image name="Olio_Vector_Up_SignUp" width="676" height="512"/>
         <image name="Olio_White_Project" width="1769" height="512"/>
-        <image name="Olio_White_SignUp" width="1938" height="512"/>
         <image name="Olio_Yellow_Star" width="549" height="512"/>
         <image name="Olio_blue_Logo" width="512" height="512"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

@@ -21,6 +21,7 @@
 		6A9C4C4025F7B97800F2AC18 /* SignInViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9C4C3F25F7B97800F2AC18 /* SignInViewcontroller.swift */; };
 		6AA96F1F2611B6EE004649D5 /* UseTechnologyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA96F1E2611B6EE004649D5 /* UseTechnologyTableViewCell.swift */; };
 		6AB9265A2608237800C31689 /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB926592608237800C31689 /* SchoolTableViewCell.swift */; };
+		6AC7D2D6263FD4A4003485D5 /* CheckDuplicatesViewCotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC7D2D5263FD4A4003485D5 /* CheckDuplicatesViewCotroller.swift */; };
 		6ACF4E5C2612F85600A54FF8 /* CertificateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACF4E5B2612F85600A54FF8 /* CertificateTableViewCell.swift */; };
 		6AD283872600F0BC00C0BA9F /* ProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD283862600F0BC00C0BA9F /* ProjectCollectionViewCell.swift */; };
 		6AD2A6862611D45800FF7C6C /* AwardWinningCareerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD2A6852611D45800FF7C6C /* AwardWinningCareerTableViewCell.swift */; };
@@ -51,6 +52,7 @@
 		6A9C4C3F25F7B97800F2AC18 /* SignInViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewcontroller.swift; sourceTree = "<group>"; };
 		6AA96F1E2611B6EE004649D5 /* UseTechnologyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseTechnologyTableViewCell.swift; sourceTree = "<group>"; };
 		6AB926592608237800C31689 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
+		6AC7D2D5263FD4A4003485D5 /* CheckDuplicatesViewCotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckDuplicatesViewCotroller.swift; sourceTree = "<group>"; };
 		6ACF4E5B2612F85600A54FF8 /* CertificateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateTableViewCell.swift; sourceTree = "<group>"; };
 		6AD283862600F0BC00C0BA9F /* ProjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCollectionViewCell.swift; sourceTree = "<group>"; };
 		6AD2A6852611D45800FF7C6C /* AwardWinningCareerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardWinningCareerTableViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				6A5ECC3F26041B330027EA6B /* AwardWinningCareerViewController.swift */,
 				6A5ECC4226041BE20027EA6B /* CertificateViewController.swift */,
 				6A71E0052608784D00596F58 /* FindIdPasswardViewController.swift */,
+				6AC7D2D5263FD4A4003485D5 /* CheckDuplicatesViewCotroller.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				6A5ECC4026041B330027EA6B /* AwardWinningCareerViewController.swift in Sources */,
 				6AD2A6892611EA4F00FF7C6C /* ProfileProjectTableViewCell.swift in Sources */,
 				6AA96F1F2611B6EE004649D5 /* UseTechnologyTableViewCell.swift in Sources */,
+				6AC7D2D6263FD4A4003485D5 /* CheckDuplicatesViewCotroller.swift in Sources */,
 				6A5ECC3D26041AED0027EA6B /* ProfileProjectViewController.swift in Sources */,
 				6A13745D260241E600E75EA7 /* ProfileViewController.swift in Sources */,
 				6AFA32A125FA58DB001E6972 /* WelcomeToOlioViewController.swift in Sources */,

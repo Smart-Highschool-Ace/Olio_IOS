@@ -72,7 +72,7 @@ class SignInViewcontroller: UIViewController{
             make.left.equalTo(signInButton.snp.left)
             make.width.equalTo(116)
             make.height.equalTo(12)
-            make.top.equalTo(signInButton.snp.bottom).inset(-30)
+            make.top.equalTo(signInButton.snp.bottom).offset(50)
         }
     }
     
@@ -98,7 +98,7 @@ class SignInViewcontroller: UIViewController{
     func SignInTitleSnapKit(){
         signInTitle.snp.makeConstraints { (make) in
             make.width.equalToSuperview().dividedBy(5)
-            make.centerX.equalToSuperview().dividedBy(-2)
+            make.right.equalToSuperview().inset(50)
             make.top.equalToSuperview().offset(180)
             make.height.equalToSuperview().dividedBy(23)
         }

@@ -11,6 +11,12 @@ import SnapKit
 class SignUpViewController: UIViewController{
     
     //MARK: Outlet var, let
+    @IBOutlet weak var checkDuplicates: UIButton!
+    @IBOutlet weak var emailTitle: UIImageView!
+    @IBOutlet weak var emailUnderLine: UIImageView!
+    @IBOutlet weak var passwardCheckUnderLine: UIImageView!
+    @IBOutlet weak var passwardUnderLine: UIImageView!
+    @IBOutlet weak var signUpTitle: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwardTextField: UITextField!
     @IBOutlet weak var passwardCheckTextField: UITextField!
@@ -18,13 +24,15 @@ class SignUpViewController: UIViewController{
     @IBOutlet weak var signInDownDecorations: UIImageView!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var haveAccount: UIButton!
-    @IBOutlet weak var emailView: UIView!
-    @IBOutlet weak var firstAuthenticationNumber: UITextField!
-    @IBOutlet weak var secondAuthenticationNumber: UITextField!
-    @IBOutlet weak var thirdAuthenticationNumber: UITextField!
-    @IBOutlet weak var fourAuthenticationNumber: UITextField!
-    @IBOutlet weak var fiveAuthenticationNumber: UITextField!
-    @IBOutlet weak var sixAuthenticationNumber: UITextField!
+    @IBOutlet weak var passwardTextFieldCondition: UILabel!
+    
+    lazy var signUpButtonTitle: UILabel = {
+        var l = UILabel()
+        l.text = "Sign up"
+        l.textColor = .white
+        l.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        return l
+    }()
     
     //MARK: var, let
     var currentTextfieldCount: Int = 1
@@ -33,42 +41,32 @@ class SignUpViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        secondAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        thirdAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        fourAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        fiveAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        sixAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
-        
-        firstAuthenticationNumber.becomeFirstResponder()
-        
-        firstAuthenticationNumber.delegate = self
-        secondAuthenticationNumber.delegate = self
-        thirdAuthenticationNumber.delegate = self
-        fourAuthenticationNumber.delegate = self
-        fiveAuthenticationNumber.delegate = self
-        sixAuthenticationNumber.delegate = self
-        
-        emailView.layer.shadowOpacity = 0.1
-        emailView.layer.shadowOffset = CGSize(width: 0, height: 5)
-        emailView.layer.shadowRadius = 10
-        emailView.layer.masksToBounds = false
-        emailView.layer.cornerRadius = 15
-        
-        emailView.center = CGPoint(x: 38+297/2, y: 196+420/2)
-        
-        emailView.isHidden = true
+        self.signUpButton.addSubview(signUpButtonTitle)
         
         SignIntopDecorationsSnapKit()
         SignInDownDecorationsSnapKit()
+        SignUpTitleSnapKit()
+        EmailTitleSnapKit()
+        EmailTextFieldSnapKit()
+        EmailUnderLineSnapKit()
+        PasswrdTextFieldSnapKit()
+        PasswardUnderLineSnapKit()
+        PasswardTextFieldConditionSnpaKit()
+        PasswardCheckTextFieldSnapKit()
+        PasswardCheckUnderLineSnapKit()
+        SignUpButtonSnapKit()
+        signUpButtonTitleSnapKit()
+        CheckDuplicatesSnapKit()
+        haveAccountSnapKit()
     }
     
-    @IBAction func email(_ sender: Any) {
-        emailView.isHidden = false
-    }
-    
-    @IBAction func modifyEmail(_ sender: Any) {
-        emailView.isHidden = true
+    @IBAction func CheckDuplicatesButton(_ sender: Any) {
+        guard let bottomView = storyboard?.instantiateViewController(withIdentifier: "CheckDuplicatesViewCotroller")
+                else { return }
+        
+        addChild(bottomView)
+        bottomView.view.frame = CGRect(x: 100, y: 100, width: 297, height: 420)
+        self.view.addSubview(bottomView.view)
     }
     
     //MARK: 이미 계정이 있으신가요?
@@ -76,44 +74,131 @@ class SignUpViewController: UIViewController{
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc func textFieldDidChange(textField: UITextField) {
-        
-        if currentTextfieldCount < 6{
-            currentTextfieldCount += 1
+    //MARK: haveAccount
+    func haveAccountSnapKit(){
+        haveAccount.snp.makeConstraints { (make) in
+            make.right.equalTo(signUpButton)
+            make.top.equalTo(signUpButton.snp.bottom).offset(50)
+            make.width.equalTo(116)
+            make.height.equalTo(12)
         }
-        
-     
-        
-            
-            print("count : \(currentTextfieldCount)")
-            
-            switch currentTextfieldCount {
-            case 2:
-                secondAuthenticationNumber.becomeFirstResponder()
-                break
-            case 3:
-                thirdAuthenticationNumber.becomeFirstResponder()
-                break
-            case 4:
-                fourAuthenticationNumber.becomeFirstResponder()
-                break
-            case 5:
-                fiveAuthenticationNumber.becomeFirstResponder()
-                break
-            case 6:
-                sixAuthenticationNumber.becomeFirstResponder()
-                break
-            default:
-                break
-            }
-        
-        
     }
     
-    //MARK: textfield MaxLength
-    func checkMaxLength(textField: UITextField!, maxLength: Int) {
-        if (textField.text?.count ?? 0 > maxLength) {
-            textField.deleteBackward()
+    //MARK: checkDuplicates
+    func CheckDuplicatesSnapKit(){
+        checkDuplicates.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().inset(50)
+            make.width.equalTo(50)
+            make.height.equalTo(20)
+            make.bottom.equalTo(emailTitle.snp.top)
+        }
+    }
+    
+    //MARK: SnapKit - SignInTitle
+    func signUpButtonTitleSnapKit(){
+        signUpButtonTitle.snp.makeConstraints { (make) in            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().inset(12)
+        }
+    }
+    
+    //MARK: SnapKit - SignUpButton
+    func SignUpButtonSnapKit(){
+        signUpButton.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().inset(43)
+            make.top.equalTo(passwardCheckUnderLine.snp.bottom).offset(50)
+            make.height.equalTo(51)
+        }
+    }
+    
+    //MARK: SnapKit - passwardCheckUnderLine
+    func PasswardCheckUnderLineSnapKit(){
+        passwardCheckUnderLine.snp.makeConstraints { (make) in
+            make.top.equalTo(passwardCheckTextField.snp.bottom)
+            make.left.equalTo(passwardUnderLine.snp.left)
+            make.width.equalTo(passwardUnderLine)
+            make.height.equalTo(4)
+        }
+    }
+    
+    //MARK: SnapKit - passwardCheckTextField
+    func PasswardCheckTextFieldSnapKit(){
+        passwardCheckTextField.snp.makeConstraints { (make) in
+            make.top.equalTo(passwardTextFieldCondition.snp.bottom).offset(30)
+            make.left.equalTo(passwardTextFieldCondition)
+            make.width.equalTo(passwardUnderLine)
+            make.height.equalTo(31)
+        }
+    }
+    
+    //MARK: SnapKit - passwardTextFieldCondition
+    func PasswardTextFieldConditionSnpaKit(){
+        passwardTextFieldCondition.snp.makeConstraints { (make) in
+            make.left.equalTo(emailUnderLine)
+            make.width.equalToSuperview()
+            make.height.equalTo(12)
+            make.top.equalTo(passwardUnderLine.snp.bottom)
+        }
+    }
+    
+    //MARK: SnapKit - PasswardTextField
+    func PasswrdTextFieldSnapKit(){
+        passwardTextField.snp.makeConstraints { (make) in
+            make.top.equalTo(emailUnderLine.snp.bottom).offset(30)
+            make.width.equalTo(emailUnderLine)
+            make.height.equalTo(31)
+            make.left.equalTo(emailUnderLine)
+        }
+    }
+    
+    //MARK: SnapKit - PasswardUnderLine
+    func PasswardUnderLineSnapKit(){
+        passwardUnderLine.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.left.equalTo(emailUnderLine.snp.left)
+            make.width.equalTo(emailUnderLine)
+            make.height.equalTo(4)
+            make.top.equalTo(passwardTextField.snp.bottom)
+        }
+    }
+    
+    //MARK: SnapKit - EmailUnderLine
+    func EmailUnderLineSnapKit(){
+        emailUnderLine.snp.makeConstraints { (make) in
+            make.top.equalTo(emailTextField.snp.bottom)
+            make.left.equalTo(emailTitle)
+            make.width.equalTo(emailTextField)
+            make.height.equalTo(4)
+        }
+    }
+    
+    //MARK: SnapKit - EmailTextField
+    func EmailTextFieldSnapKit(){
+        emailTextField.snp.makeConstraints { (make) in
+            make.top.equalTo(emailTitle.snp.bottom)
+            make.centerX.equalToSuperview()
+            make.left.equalToSuperview().offset(50)
+            make.height.equalTo(31)
+        }
+    }
+    
+    //MARK: SnapKit - EmailTitle
+    func EmailTitleSnapKit(){
+        emailTitle.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview().offset(-80)
+            make.width.equalTo(37)
+            make.height.equalTo(20)
+            make.left.equalToSuperview().offset(50)
+        }
+    }
+    
+    //MARK: SnapKit - SignUpTitle
+    func SignUpTitleSnapKit(){
+        signUpTitle.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(50)
+            make.top.equalToSuperview().offset(180)
+            make.height.equalToSuperview().dividedBy(23)
+            make.width.equalToSuperview().dividedBy(5)
         }
     }
     
@@ -125,7 +210,7 @@ class SignUpViewController: UIViewController{
             make.height.equalTo(289)
         }
     }
-    
+
     //MARK: SnapKit - DownDecoration
     func SignInDownDecorationsSnapKit(){
         signInDownDecorations.snp.makeConstraints { (make) in
@@ -134,51 +219,6 @@ class SignUpViewController: UIViewController{
             make.left.equalToSuperview().offset(-60)
             make.height.equalTo(370)
         }
-    }
-}
-
-extension SignUpViewController: UITextFieldDelegate {
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let char = string.cString(using: String.Encoding.utf8){
-            let isBackSpace = strcmp(char, "\\b")
-            if isBackSpace == -92{
-                print("isBackSpace")
-                print("currentTextfieldCount > \(currentTextfieldCount)")
-                switch currentTextfieldCount      {
-                case 2:
-                    break
-                case 3:
-                    currentTextfieldCount -= 1
-                    print("after currentTextfieldCount\(currentTextfieldCount)")
-                    secondAuthenticationNumber.becomeFirstResponder()
-                    break
-                case 4:
-                    currentTextfieldCount -= 1
-                    print("after currentTextfieldCount\(currentTextfieldCount)")
-                    thirdAuthenticationNumber.becomeFirstResponder()
-                    break
-                case 5:
-                    currentTextfieldCount -= 1
-                    print("after currentTextfieldCount\(currentTextfieldCount)")
-                    fourAuthenticationNumber.becomeFirstResponder()
-                    break
-                case 6:
-                    currentTextfieldCount -= 1
-                    print("after currentTextfieldCount\(currentTextfieldCount)")
-                    fiveAuthenticationNumber.becomeFirstResponder()
-                    break
-                default:
-                    break
-                }
-                return true
-            }
-        }
-        
-        // 길이제한
-        checkMaxLength(textField: textField, maxLength: 0)
-        
-        return true
     }
 }
 

@@ -207,7 +207,7 @@ class DescriptionViewController: UIViewController{
     func DescriptionNextButton(){
         nextButton.snp.makeConstraints { (make) in
             make.bottom.equalTo(self.view.snp.bottom).inset(30)
-            make.centerX.equalToSuperview()
+            make.right.equalToSuperview().inset(30)
             make.width.height.equalTo(74)
         }
     }
