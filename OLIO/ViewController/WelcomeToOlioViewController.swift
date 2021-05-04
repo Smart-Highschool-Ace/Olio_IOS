@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class WelcomeToOlioViewController: UIViewController{
     
@@ -14,18 +15,41 @@ class WelcomeToOlioViewController: UIViewController{
     @IBOutlet weak var downButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var introduceTextView: UITextView!
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var chooseSchoolLabel: UILabel!
     @IBOutlet weak var chooseSchool: UIButton!
     @IBOutlet weak var schoolView: UIView!
+    @IBOutlet weak var olioIntroTitle: UIImageView!
+    @IBOutlet weak var emailTextFieldBackground: UIImageView!
+    
     
     let picker = UIImagePickerController()
     var isSeleted = false
-
+    
+    lazy var signUpButtonTitle: UILabel = {
+        var l = UILabel()
+        l.text = "Sign up"
+        l.textColor = .white
+        l.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
+        return l
+    }()
+    
+    let imageDisplayView: UIView = {
+        let v = UIView()
+        v.backgroundColor = UIColor.white
+        v.layer.shadowOpacity = 0.3
+        v.layer.shadowOffset = CGSize(width: 0, height: 5)
+        v.layer.masksToBounds = false
+        return v
+    }()
+    
     //MARK: lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Add UIView as a Subview
+        self.view.addSubview(imageDisplayView)
+        
+        emailTextFieldBackground.addSubview(nameTextField)
         
         self.schoolView.center = CGPoint(x:187, y:600)
         
@@ -37,13 +61,12 @@ class WelcomeToOlioViewController: UIViewController{
         schoolView.layer.masksToBounds = false
         schoolView.layer.cornerRadius = 10
         
-        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         picker.delegate = self
-        profileImageView.isHidden = true
-        profileImageView.layer.borderWidth = 1
-        profileImageView.layer.borderColor = UIColor.clear.cgColor
-                    // 뷰의 경계에 맞춰준다
-        profileImageView.clipsToBounds = true
+        
+        OlioIntroTitleSnapKit()
+        imageDisplayViewSnapKit()
+        
+        imageDisplayView.layer.cornerRadius = imageDisplayView.frame.height/2
     }
     
     @IBAction func modifyPicture(_ sender: Any) {
@@ -97,6 +120,7 @@ class WelcomeToOlioViewController: UIViewController{
         chooseSchool.setImage(UIImage(named: "Olio_Down_Button"), for: .normal)
         isSeleted = false
     }
+    
     //MARK: 프로필 사진 추가
     @IBAction func addPhotoButton(_ sender: Any) {
 
@@ -152,6 +176,29 @@ class WelcomeToOlioViewController: UIViewController{
         
     }
     
+    //MARK: SnapKit - EmailTextFieldBackground
+    func EmailTextFieldBackgroundSnapKit(){
+        
+    }
+    
+    //MARK: SnapKit - OlioIntroTitle
+    func OlioIntroTitleSnapKit(){
+        olioIntroTitle.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(160)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(207)
+            make.height.equalTo(60)
+        }
+    }
+    
+    func imageDisplayViewSnapKit(){
+        imageDisplayView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(olioIntroTitle.snp.bottom).offset(50)
+            make.width.equalToSuperview().dividedBy(3)
+            make.height.equalTo(imageDisplayView.snp.width)
+        }
+    }
 }
 
 
@@ -161,10 +208,10 @@ extension WelcomeToOlioViewController : UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            addPhotoButton.isHidden = true
-            profileImageView.isHidden = false
-            profileImageView.image = image
+        if (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) != nil{
+//            addPhotoButton.isHidden = true
+//            profileImageView.isHidden = false
+//            profileImageView.image = image
                  print(info)
              }
              dismiss(animated: true, completion: nil)
