@@ -19,7 +19,7 @@ class WelcomeToOlioViewController: UIViewController{
     @IBOutlet weak var chooseSchool: UIButton!
     @IBOutlet weak var schoolView: UIView!
     @IBOutlet weak var olioIntroTitle: UIImageView!
-    @IBOutlet weak var emailTextFieldBackground: UIImageView!
+    @IBOutlet weak var nameTextFieldBackground: UIImageView!
     
     
     let picker = UIImagePickerController()
@@ -49,7 +49,7 @@ class WelcomeToOlioViewController: UIViewController{
         // Add UIView as a Subview
         self.view.addSubview(imageDisplayView)
         
-        emailTextFieldBackground.addSubview(nameTextField)
+        nameTextFieldBackground.addSubview(nameTextField)
         
         self.schoolView.center = CGPoint(x:187, y:600)
         
@@ -65,8 +65,8 @@ class WelcomeToOlioViewController: UIViewController{
         
         OlioIntroTitleSnapKit()
         imageDisplayViewSnapKit()
-        
-        imageDisplayView.layer.cornerRadius = imageDisplayView.frame.height/2
+        NameTextFieldBackgroundSnapKit()
+        NameTextFieldSnapKit()
     }
     
     @IBAction func modifyPicture(_ sender: Any) {
@@ -177,8 +177,13 @@ class WelcomeToOlioViewController: UIViewController{
     }
     
     //MARK: SnapKit - EmailTextFieldBackground
-    func EmailTextFieldBackgroundSnapKit(){
-        
+    func NameTextFieldBackgroundSnapKit(){
+        nameTextFieldBackground.snp.makeConstraints { (make) in
+            make.top.equalTo(imageDisplayView.snp.bottom).offset(50)
+            make.width.equalToSuperview().dividedBy(1.5)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(38)
+        }
     }
     
     //MARK: SnapKit - OlioIntroTitle
@@ -197,6 +202,15 @@ class WelcomeToOlioViewController: UIViewController{
             make.top.equalTo(olioIntroTitle.snp.bottom).offset(50)
             make.width.equalToSuperview().dividedBy(3)
             make.height.equalTo(imageDisplayView.snp.width)
+        }
+    }
+    
+    func NameTextFieldSnapKit(){
+        nameTextField.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview().inset(20)
+            make.height.equalToSuperview()
         }
     }
 }

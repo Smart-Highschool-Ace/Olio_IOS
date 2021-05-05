@@ -404,9 +404,9 @@
                         <outlet property="chooseSchool" destination="k9y-KM-XEa" id="jxr-Ak-AGG"/>
                         <outlet property="chooseSchoolLabel" destination="IGk-Pp-hrM" id="PxN-q3-HDE"/>
                         <outlet property="downButton" destination="k9y-KM-XEa" id="GQI-kR-kaR"/>
-                        <outlet property="emailTextFieldBackground" destination="vSk-2t-riq" id="c0W-uQ-GBh"/>
                         <outlet property="introduceTextView" destination="7tJ-fy-Nap" id="k7c-Ve-Hwc"/>
-                        <outlet property="nameTextField" destination="fle-hX-j1Q" id="xJ1-b6-UgF"/>
+                        <outlet property="nameTextField" destination="fle-hX-j1Q" id="Ovd-01-kux"/>
+                        <outlet property="nameTextFieldBackground" destination="vSk-2t-riq" id="c0W-uQ-GBh"/>
                         <outlet property="nextButton" destination="9dz-CS-35U" id="gJ8-ve-Ouz"/>
                         <outlet property="olioIntroTitle" destination="cyN-xV-kTB" id="o2W-50-Uun"/>
                         <outlet property="schoolView" destination="nbl-Zr-uuA" id="qnI-7u-haO"/>
