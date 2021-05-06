@@ -65,7 +65,6 @@ class SignUpViewController: UIViewController{
                 else { return }
         
         addChild(bottomView)
-        bottomView.view.frame = CGRect(x: 100, y: 100, width: 297, height: 420)
         self.view.addSubview(bottomView.view)
     }
     

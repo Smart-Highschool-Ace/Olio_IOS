@@ -12,28 +12,28 @@ class WelcomeToOlioViewController: UIViewController{
     
     //MARK: Outlet var, let
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var downButton: UIButton!
+    @IBOutlet weak var chooseSchoolTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var introduceTextView: UITextView!
-    @IBOutlet weak var chooseSchoolLabel: UILabel!
-    @IBOutlet weak var chooseSchool: UIButton!
+    @IBOutlet weak var chooseSchoolButton: UIButton!
     @IBOutlet weak var schoolView: UIView!
     @IBOutlet weak var olioIntroTitle: UIImageView!
-    @IBOutlet weak var nameTextFieldBackground: UIImageView!
+    @IBOutlet weak var nameTextFieldBackground: UIView!
+    @IBOutlet weak var chooseSchoolTextFieldBackground: UIView!
+    @IBOutlet weak var introductionTitle: UIImageView!
+    @IBOutlet weak var introduceTextFieldBackground: UIView!
     
     
     let picker = UIImagePickerController()
     var isSeleted = false
-    
-    lazy var signUpButtonTitle: UILabel = {
-        var l = UILabel()
-        l.text = "Sign up"
-        l.textColor = .white
-        l.font = UIFont.boldSystemFont(ofSize: UIFont.labelFontSize)
-        return l
+    lazy var introduceTextView: UITextView = {
+       var textView = UITextView()
+        textView.text = "한줄소개를 입력해주세요"
+        textView.backgroundColor = .clear
+        textView.textColor = .lightGray
+        return textView
     }()
     
-    let imageDisplayView: UIView = {
+    let ImageDisplayView: UIView = {
         let v = UIView()
         v.backgroundColor = UIColor.white
         v.layer.shadowOpacity = 0.3
@@ -46,10 +46,16 @@ class WelcomeToOlioViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Add UIView as a Subview
-        self.view.addSubview(imageDisplayView)
+        nameTextFieldBackground.layer.cornerRadius = 10
+        chooseSchoolTextFieldBackground.layer.cornerRadius = 10
+        introduceTextFieldBackground.layer.cornerRadius = 10
+        
+        self.view.addSubview(ImageDisplayView)
         
         nameTextFieldBackground.addSubview(nameTextField)
+        chooseSchoolTextFieldBackground.addSubview(chooseSchoolTextField)
+        chooseSchoolTextFieldBackground.addSubview(chooseSchoolButton)
+        introduceTextFieldBackground.addSubview(introduceTextView)
         
         self.schoolView.center = CGPoint(x:187, y:600)
         
@@ -63,10 +69,13 @@ class WelcomeToOlioViewController: UIViewController{
         
         picker.delegate = self
         
-        OlioIntroTitleSnapKit()
-        imageDisplayViewSnapKit()
-        NameTextFieldBackgroundSnapKit()
         NameTextFieldSnapKit()
+        ImageDisplayViewSnapKit()
+        OlioIntroTitleSnapKit()
+        IntroductionTitleSnapKit()
+        NameTextFieldBackgroundSnapKit()
+        ChooseSchoolTextFieldBackgroundSnapKit()
+        IntroduceTextFieldBackgroundSnapKit()
     }
     
     @IBAction func modifyPicture(_ sender: Any) {
@@ -86,38 +95,38 @@ class WelcomeToOlioViewController: UIViewController{
     }
     
     @IBAction func gwangjuSM(_ sender: Any) {
-        chooseSchoolLabel.text = "광주소프트웨어마이스터고등학교"
+        chooseSchoolTextField.text = "광주소프트웨어마이스터고등학교"
         UIView.animate(withDuration: 0.3){
             self.schoolView.center = CGPoint(x:187, y:600)
             self.schoolView.isHidden = true
-            self.chooseSchoolLabel.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+            self.chooseSchoolTextField.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         }
         
-        chooseSchool.setImage(UIImage(named: "Olio_Down_Button"), for: .normal)
+        chooseSchoolButton.setImage(UIImage(named: "Olio_Down_Button"), for: .normal)
         isSeleted = false
     }
     
     @IBAction func daeduckSM(_ sender: Any) {
-        chooseSchoolLabel.text = "대덕소프트웨어마이스터고등학교"
+        chooseSchoolTextField.text = "대덕소프트웨어마이스터고등학교"
         UIView.animate(withDuration: 0.3){
             self.schoolView.center = CGPoint(x:187, y:600)
             self.schoolView.isHidden = true
-            self.chooseSchoolLabel.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+            self.chooseSchoolTextField.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         }
         
-        chooseSchool.setImage(UIImage(named: "Olio_Down_Button"), for: .normal)
+        chooseSchoolButton.setImage(UIImage(named: "Olio_Down_Button"), for: .normal)
         isSeleted = false
     }
     
     @IBAction func daeguSM(_ sender: Any) {
-        chooseSchoolLabel.text = "대구소프트웨어마이스터고등학교"
+        chooseSchoolTextField.text = "대구소프트웨어마이스터고등학교"
         UIView.animate(withDuration: 0.3){
             self.schoolView.center = CGPoint(x:187, y:600)
             self.schoolView.isHidden = true
-            self.chooseSchoolLabel.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
+            self.chooseSchoolTextField.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)
         }
         
-        chooseSchool.setImage(UIImage(named: "Olio_Down_Button"), for: .normal)
+        chooseSchoolButton.setImage(UIImage(named: "Olio_Down_Button"), for: .normal)
         isSeleted = false
     }
     
@@ -161,61 +170,111 @@ class WelcomeToOlioViewController: UIViewController{
                 self.schoolView.center = CGPoint(x:187, y:605)
                 self.schoolView.isHidden = false
             }
-            chooseSchoolLabel.textColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1)
-            chooseSchool.setImage(UIImage(named: "Olio_Up_Button"), for: .normal)
+            chooseSchoolTextField.textColor = UIColor(red: 208/255, green: 208/255, blue: 208/255, alpha: 1)
+            chooseSchoolButton.setImage(UIImage(named: "Olio_Up_Button"), for: .normal)
             isSeleted = true
         }else{
             UIView.animate(withDuration: 0.3){
                 self.schoolView.center = CGPoint(x:187, y:600)
                 self.schoolView.isHidden = true
             }
-            chooseSchoolLabel.textColor = UIColor(red: 130/255, green: 130/255, blue: 130/255, alpha: 1)
-            chooseSchool.setImage(UIImage(named: "Olio_Down_Button"), for: .normal)
+            chooseSchoolTextField.textColor = UIColor(red: 130/255, green: 130/255, blue: 130/255, alpha: 1)
+            chooseSchoolButton.setImage(UIImage(named: "Olio_Down_Button"), for: .normal)
             isSeleted = false
         }
         
     }
-    
-    //MARK: SnapKit - EmailTextFieldBackground
-    func NameTextFieldBackgroundSnapKit(){
-        nameTextFieldBackground.snp.makeConstraints { (make) in
-            make.top.equalTo(imageDisplayView.snp.bottom).offset(50)
-            make.width.equalToSuperview().dividedBy(1.5)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(38)
-        }
-    }
+
     
     //MARK: SnapKit - OlioIntroTitle
     func OlioIntroTitleSnapKit(){
         olioIntroTitle.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(160)
             make.centerX.equalToSuperview()
-            make.width.equalTo(207)
+            make.bottom.equalTo(ImageDisplayView.snp.top)
             make.height.equalTo(60)
+            make.width.equalTo(207)
         }
     }
     
-    func imageDisplayViewSnapKit(){
-        imageDisplayView.snp.makeConstraints { (make) in
+    func ImageDisplayViewSnapKit(){
+        ImageDisplayView.snp.makeConstraints { (make) in
+            make.bottom.equalTo(nameTextFieldBackground.snp.top)
+            make.width.equalToSuperview().dividedBy(2.8)
+            make.height.equalTo(ImageDisplayView.snp.width)
             make.centerX.equalToSuperview()
-            make.top.equalTo(olioIntroTitle.snp.bottom).offset(50)
-            make.width.equalToSuperview().dividedBy(3)
-            make.height.equalTo(imageDisplayView.snp.width)
         }
     }
     
+    //MARK: SnapKit - NameTextFieldBackgroundSnapKit
+    func NameTextFieldBackgroundSnapKit(){
+        nameTextFieldBackground.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.height.equalTo(35)
+            make.width.equalToSuperview().dividedBy(1.7)
+        }
+    }
+    
+    //MARK: SnapKit - chooseSchoolTextFieldBackgroundSnapKit
+    func ChooseSchoolTextFieldBackgroundSnapKit(){
+        chooseSchoolTextFieldBackground.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(nameTextFieldBackground.snp.bottom)
+            make.width.height.equalTo(nameTextFieldBackground)
+        }
+    }
+    
+    //MARK: SnapKit - NameTextFieldSnapKit
     func NameTextFieldSnapKit(){
         nameTextField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
-            make.width.equalToSuperview().inset(20)
-            make.height.equalToSuperview()
+            make.width.equalToSuperview().inset(15)
+            make.height.equalToSuperview().inset(5)
+        }
+    }
+    
+    //MARK: SnapKit - ChooseSchoolTextFieldSnapKit
+    func ChooseSchoolTextFieldSnapKit(){
+        chooseSchoolTextField.snp.makeConstraints { (make) in
+        }
+    }
+    
+    //MARK: SnapKit - ChooseSchoolButtonSnapKit
+    func ChooseSchoolButtonSnapKit(){
+        chooseSchoolButton.snp.makeConstraints { (make) in
+        }
+    }
+    
+    //MARK: SnapKit - IntroductionTitleSnapKit
+    func IntroductionTitleSnapKit(){
+        introductionTitle.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(chooseSchoolTextFieldBackground.snp.bottom)
+            make.left.equalTo(chooseSchoolTextFieldBackground)
+            make.height.equalTo(introductionTitle.snp.width).multipliedBy(4)
+            make.width.equalToSuperview().dividedBy(7)
+        }
+    }
+    
+    //MARK: SnapKit - IntroduceTextFieldBackgroundSnapKit
+    func IntroduceTextFieldBackgroundSnapKit(){
+        introduceTextFieldBackground.snp.makeConstraints { (make) in
+        }
+    }
+    
+    //MARK: SnapKit - IntroduceTextViewSnapKit
+    func IntroduceTextViewSnapKit(){
+        introduceTextView.snp.makeConstraints { (make) in
+        }
+    }
+    
+    //MARK: SnapKit - NextButtonSnapKit
+    func NextButtonSnapKit(){
+        nextButton.snp.makeConstraints { (make) in
         }
     }
 }
-
-
 
 extension WelcomeToOlioViewController : UIImagePickerControllerDelegate,
 

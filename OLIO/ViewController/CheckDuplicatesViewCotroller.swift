@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import SnapKit
 
 class CheckDuplicatesViewCotroller: UIViewController{
+    @IBOutlet weak var emailAuthenticationNumberWriteIntroTitle: UITextView!
+    @IBOutlet weak var emailIntroduceTitle: UITextView!
+    @IBOutlet weak var emailIcon: UIImageView!
+    @IBOutlet weak var emailReSendButton: UIButton!
+    @IBOutlet weak var emailAuthenticationTitle: UILabel!
     @IBOutlet weak var firstAuthenticationNumber: UITextField!
     @IBOutlet weak var secondAuthenticationNumber: UITextField!
     @IBOutlet weak var thirdAuthenticationNumber: UITextField!
@@ -15,11 +21,24 @@ class CheckDuplicatesViewCotroller: UIViewController{
     @IBOutlet weak var fiveAuthenticationNumber: UITextField!
     @IBOutlet weak var sixAuthenticationNumber: UITextField!
     @IBOutlet weak var emailView: UIView!
+    @IBOutlet weak var emailModify: UIButton!
     
     var currentTextfieldCount: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailView.addSubview(emailAuthenticationNumberWriteIntroTitle)
+        emailView.addSubview(emailIntroduceTitle)
+        emailView.addSubview(emailIcon)
+        emailView.addSubview(emailReSendButton)
+        emailView.addSubview(emailAuthenticationTitle)
+        emailView.addSubview(firstAuthenticationNumber)
+        emailView.addSubview(secondAuthenticationNumber)
+        emailView.addSubview(thirdAuthenticationNumber)
+        emailView.addSubview(fourAuthenticationNumber)
+        emailView.addSubview(fiveAuthenticationNumber)
+        emailView.addSubview(sixAuthenticationNumber)
         
         emailView.layer.shadowOpacity = 0.1
         emailView.layer.shadowOffset = CGSize(width: 0, height: 5)
@@ -42,7 +61,13 @@ class CheckDuplicatesViewCotroller: UIViewController{
         fourAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         fiveAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
         sixAuthenticationNumber.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: .editingChanged)
+    
+        EmailViewSnapKit()
+        EmailAuthenticationTitle()
+        EmailModifySnapKit()
+        EmailReSendSnapKit()
     }
+    
     @IBAction func emailModify(_ sender: Any) {
         willMove(toParent: nil)
         view.removeFromSuperview()
@@ -55,29 +80,63 @@ class CheckDuplicatesViewCotroller: UIViewController{
             currentTextfieldCount += 1
         }
         
-            print("count : \(currentTextfieldCount)")
+        print("count : \(currentTextfieldCount)")
             
-            switch currentTextfieldCount {
-            case 2:
-                secondAuthenticationNumber.becomeFirstResponder()
-                break
-            case 3:
-                thirdAuthenticationNumber.becomeFirstResponder()
-                break
-            case 4:
-                fourAuthenticationNumber.becomeFirstResponder()
-                break
-            case 5:
-                fiveAuthenticationNumber.becomeFirstResponder()
-                break
-            case 6:
-                sixAuthenticationNumber.becomeFirstResponder()
-                break
-            default:
-                break
-            }
-        
-        
+        switch currentTextfieldCount {
+        case 2:
+            secondAuthenticationNumber.becomeFirstResponder()
+            break
+        case 3:
+            thirdAuthenticationNumber.becomeFirstResponder()
+            break
+        case 4:
+            fourAuthenticationNumber.becomeFirstResponder()
+            break
+        case 5:
+            fiveAuthenticationNumber.becomeFirstResponder()
+            break
+        case 6:
+            sixAuthenticationNumber.becomeFirstResponder()
+            break
+        default:
+            break
+        }
+    }
+    
+    func EmailViewSnapKit(){
+        emailView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview().dividedBy(1.2)
+            make.height.equalToSuperview().dividedBy(1.7)
+        }
+    }
+    
+    func EmailAuthenticationTitle(){
+        emailAuthenticationTitle.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.left.equalToSuperview()
+            make.width.equalTo(82)
+            make.height.equalTo(22)
+        }
+    }
+    
+    func EmailModifySnapKit(){
+        emailModify.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.right.equalToSuperview()
+            make.width.equalTo(64)
+            make.height.equalTo(24)
+        }
+    }
+    
+    func EmailReSendSnapKit(){
+        emailReSendButton.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(50)
+            make.right.equalToSuperview()
+            make.width.equalTo(57)
+            make.height.equalTo(20)
+        }
     }
     
     
