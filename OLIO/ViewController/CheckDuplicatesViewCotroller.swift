@@ -66,6 +66,8 @@ class CheckDuplicatesViewCotroller: UIViewController{
         EmailAuthenticationTitle()
         EmailModifySnapKit()
         EmailReSendSnapKit()
+        EmailIconSnapKit()
+        EmailIntroduceTitleSnapKit()
     }
     
     @IBAction func emailModify(_ sender: Any) {
@@ -114,8 +116,8 @@ class CheckDuplicatesViewCotroller: UIViewController{
     
     func EmailAuthenticationTitle(){
         emailAuthenticationTitle.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.left.equalToSuperview()
+            make.top.equalToSuperview().offset(43)
+            make.left.equalToSuperview().offset(31)
             make.width.equalTo(82)
             make.height.equalTo(22)
         }
@@ -123,8 +125,8 @@ class CheckDuplicatesViewCotroller: UIViewController{
     
     func EmailModifySnapKit(){
         emailModify.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.right.equalToSuperview()
+            make.top.equalToSuperview().offset(20)
+            make.right.equalToSuperview().inset(20)
             make.width.equalTo(64)
             make.height.equalTo(24)
         }
@@ -132,10 +134,28 @@ class CheckDuplicatesViewCotroller: UIViewController{
     
     func EmailReSendSnapKit(){
         emailReSendButton.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(50)
-            make.right.equalToSuperview()
+            make.top.equalToSuperview().offset(70)
+            make.right.equalToSuperview().inset(31)
             make.width.equalTo(57)
             make.height.equalTo(20)
+        }
+    }
+    
+    func EmailIconSnapKit(){
+        emailIcon.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(100)
+            make.width.equalToSuperview().dividedBy(4)
+            make.height.equalTo(emailIcon.snp.height)
+        }
+    }
+    
+    func EmailIntroduceTitleSnapKit(){
+        emailIntroduceTitle.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview().dividedBy(1.2)
+            make.height.equalTo(35)
         }
     }
     
